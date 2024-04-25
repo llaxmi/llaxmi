@@ -1,9 +1,9 @@
 /* eslint-disable react/prop-types */
 const ProjectCard = ({ image, projectName, description, link }) => {
   return (
-    <div className="max-w-sm bg-white rounded-lg shadow dark:bg-gray-800 ">
+    <div className="max-w-xs bg-white rounded-lg shadow dark:bg-gray-800 ">
       <img
-        className="rounded-t-lg h-56 w-full object-fill"
+        className="rounded-t-lg h-48 w-full object-fill"
         src={image}
         alt="Project"
       />
@@ -13,12 +13,12 @@ const ProjectCard = ({ image, projectName, description, link }) => {
           {projectName}
         </h5>
 
-        <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
+        <p className="mb-3 font-poppins text-gray-800 dark:text-gray-400">
           {description}
         </p>
         <a
           href={link}
-          className="inline-flex items-center  p-2 text-sm font-medium text-center text-white bg-green-600 rounded-lg hover:bg-green-700 focus:ring-4 focus:outline-none focus:ring-green-800"
+          className="inline-flex items-center p-2 text-sm font-medium text-center text-white bg-green-600 rounded-lg hover:bg-green-700 focus:ring-4 focus:outline-none focus:ring-green-800"
         >
           Live Demo
         </a>

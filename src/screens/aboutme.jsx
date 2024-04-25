@@ -13,18 +13,18 @@ const AboutMe = () => {
           <h2 className="md:text-4xl leading-snug  font-medium text-white font-pixel ssm:text-2xl text-center">
             Welcome to my digital playground! 👩🏻‍💻
           </h2>
-          <p className="font-lexend ssm:text-lg lg:text-xl text-tert leading-relaxed mt-4">
+          <p className="font-lexend ssm:text-base lg:text-xl text-sec leading-relaxed mt-4">
             I&apos;m currently cruising through my Software Engineering degree
             at Gandaki College Of Engineering and Science, a branch of Pokhara
             University.
           </p>
-          <p className="font-lexend ssm:text-lg lg:text-xl text-tert leading-relaxed mt-4">
+          <p className="font-lexend ssm:text-base lg:text-xl text-sec leading-relaxed mt-4">
             With a passion for app development and a sprinkle of joy found in
             web development,
             <br /> I&apos;m always exploring the endless possibilities of the
             digital world.
           </p>
-          <p className="font-lexend ssm:text-lg lg:text-xl text-tert leading-relaxed mt-4 overflow-hidden">
+          <p className="font-lexend ssm:text-bse lg:text-xl text-sec leading-relaxed mt-4 overflow-hidden">
             When I&apos;m not coding, you&apos;ll find me immersed in
             nature&apos;s whispers <br /> and captivated by the pages of books,
             where every word sparks a new adventure.🚀
