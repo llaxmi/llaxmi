@@ -20,8 +20,9 @@ const AboutMe = () => {
           </p>
           <p className="font-lexend ssm:text-lg lg:text-xl text-tert leading-relaxed mt-4">
             With a passion for app development and a sprinkle of joy found in
-            web development, I&apos;m always exploring the endless possibilities
-            of the digital world.
+            web development,
+            <br /> I&apos;m always exploring the endless possibilities of the
+            digital world.
           </p>
           <p className="font-lexend ssm:text-lg lg:text-xl text-tert leading-relaxed mt-4 overflow-hidden">
             When I&apos;m not coding, you&apos;ll find me immersed in

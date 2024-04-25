@@ -13,7 +13,7 @@ const Portfolio = () => {
         The projects I&apos;m currently immersed in are nearing completion and
         will soon be unveiled for exploration and enjoyment.
       </p>
-      <div className="p-10 w-full h-min-screen my-2 gap-x-2 gap-y-6 grid md:flex-row ssm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
+      <div className="p-10 w-full h-min-screen my-2 gap-x-2 gap-y-6 grid md:flex-row ssm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 place-items-center">
         {projects.map((projectName) => {
           return (
             <ProjectCard

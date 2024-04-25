@@ -10,7 +10,7 @@ const ContactCard = () => {
           Together, crafting solutions!
         </h3>
       </div>
-      <div className=" w-full  flex-col bg-gradient-to-r from-gradient1 to-blue-50 text-left p-4 md:p-6 rounded-lg m-4 md:m-0 grid place-content-center">
+      <div className=" w-full text-left p-4 md:p-4 rounded-lg m-4 md:m-0 grid place-content-center">
         <h2 className="text-lg md:text-xl font-semibold text-pri mb-2 md:mb-4">
           Mail me at
         </h2>
