@@ -1,6 +1,6 @@
 import p1 from "../assets/p1.png";
 import p2 from "../assets/p2.jpeg";
-
+import p3 from "../assets/p3.png";
 export const navigation = [
   {
     id: "0",
@@ -43,9 +43,16 @@ export const projects = [
   {
     projectName: "Todo App",
     description:
-      "Work To Do is a simple task management react application. It offers intuitive features for adding,and deleting tasks, ensuring seamless organization and productivity.",
+      "Work To Do is a simple task management react application which simplifies task management with intuitive features for seamless organization and productivity.",
     image: p2,
     link: "https://work-to-do-red.vercel.app",
+  },
+  {
+    projectName: "Vowel Counter",
+    description:
+      "A simple JavaScript program that counts the number of vowels in a given text or phrase. It disregards punctuation marks, spaces, and other non-alphabetic characters.",
+    image: p3,
+    link: "#vowel-counter",
   },
 ];
 export const skills = [
