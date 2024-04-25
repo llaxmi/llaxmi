@@ -11,7 +11,7 @@ export default {
     extend: {
       colors: {
         primary: "#EEEDEB",
-        secondary: "#20262E",
+        secondary: "#A9A9A9",
         tertiary: "#030637",
         gradient1: "#bac5de",
         gradient2: "#dedede",
