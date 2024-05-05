@@ -7,7 +7,7 @@ const Home = () => {
       id="home"
       className="bg-gradient-to-r from-gradient2 to-gradient1 justify-center items-center flex flex-col min-h-screen p-2 "
     >
-      <header>
+      <header className="ssm:mt-10">
         <h1 className="text-4xl ssm:text-4xl lg:text-5xl font-bold text-gray-800 font-lexend mt-2">
           Laxmi Lamichhane
         </h1>
@@ -20,7 +20,7 @@ const Home = () => {
             className="object-fill ssm:size-52 lg:size-80 md:size-60 rounded-full my-6 ssm:my-4 md:my-4  "
           />
           <section>
-            <p className="font-lexend ssm:text-lg lg:text-2xl md:text-xl text-pri leading-normal mt-4">
+            <p className="font-lexend ssm:text-lg lg:text-2xl md:text-xl text-pri mt-4 text-justify">
               Hey, I&apos;m Laxmi Lamichhane, a passionate software engineering
               student with a big passion for learning and creating cool stuff.
               I&apos;m always eager to expand my knowledge and skills to create
