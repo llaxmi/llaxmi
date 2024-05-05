@@ -9,13 +9,11 @@ const ProjectCard = ({ image, projectName, description, link }) => {
       />
 
       <div className="p-4">
-        <h5 className="mb-2 text-2xl font-bold tracking-tight text-pri">
+        <h5 className="mb-2 text-2xl font-bold tracking-tight text-white">
           {projectName}
         </h5>
 
-        <p className="mb-3 font-poppins text-gray-800 dark:text-gray-800">
-          {description}
-        </p>
+        <p className="mb-3 font-poppins text-gray-400">{description}</p>
         <a
           href={link}
           className="inline-flex items-center p-2 text-sm font-medium text-center text-white bg-green-600 rounded-lg hover:bg-green-700 focus:ring-4 focus:outline-none focus:ring-green-800"
