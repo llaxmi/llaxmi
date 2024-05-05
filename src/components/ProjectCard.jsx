@@ -9,11 +9,11 @@ const ProjectCard = ({ image, projectName, description, link }) => {
       />
 
       <div className="p-4">
-        <h5 className="mb-2 text-2xl font-bold tracking-tight text-tert">
+        <h5 className="mb-2 text-2xl font-bold tracking-tight text-pri">
           {projectName}
         </h5>
 
-        <p className="mb-3 font-poppins text-gray-800 dark:text-gray-400">
+        <p className="mb-3 font-poppins text-gray-800 dark:text-gray-800">
           {description}
         </p>
         <a
