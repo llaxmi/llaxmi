@@ -8,7 +8,7 @@ const NavBar = () => {
   const [open, setOpen] = useState(false);
 
   const toggleMenu = () => {
-    setOpen(!open);
+    setOpen((prev) => !prev);
   };
 
   return (
@@ -41,9 +41,9 @@ const NavBar = () => {
       <div className="lg:flex lg:flex-row lg:items-center lg:w-auto ssm:hidden cursor-pointer">
         {navigation.map((item) => (
           <Link
-            key={item.id}
+            key={`link_${item.id}`}
             activeClass="active"
-            to={item.url}
+            to={item.title.toLowerCase()}
             spy={true}
             smooth={true}
             offset={5}
@@ -60,9 +60,9 @@ const NavBar = () => {
             {navigation.map((item) => (
               <li key={item.id} className="py-2 cursor-pointer">
                 <Link
-                  key={item.id}
+                  key={`link_${item.id}`}
                   activeClass="active"
-                  to={item.url}
+                  to={item.title.toLowerCase()}
                   spy={true}
                   smooth={true}
                   offset={-20}

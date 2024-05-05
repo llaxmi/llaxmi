@@ -28,8 +28,6 @@ const SkillCase = ({ items }) => {
                 className="col-span-1 max-h-12 w-full object-contain lg:col-span-1"
                 src={item.src}
                 alt={item.alt}
-                width={item.width}
-                height={item.height}
               />
             </motion.li>
           </ul>
