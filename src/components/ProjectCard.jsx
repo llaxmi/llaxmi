@@ -1,26 +1,13 @@
-/* eslint-disable react/prop-types */
-const ProjectCard = ({ image, projectName, description, link }) => {
+const ProjectCard = ({ title, description, link, date }) => {
   return (
-    <div className="max-w-xs bg-white rounded-lg shadow dark:bg-gray-800 ">
-      <img
-        className="rounded-t-lg h-48 w-full object-fill"
-        src={image}
-        alt="Project"
-      />
-
-      <div className="p-4">
-        <h5 className="mb-2 text-2xl font-bold tracking-tight text-white">
-          {projectName}
-        </h5>
-
-        <p className="mb-3 font-poppins text-gray-400">{description}</p>
-        <a
-          href={link}
-          className="inline-flex items-center p-2 text-sm font-medium text-center text-white bg-green-600 rounded-lg hover:bg-green-700 focus:ring-4 focus:outline-none focus:ring-green-800"
-        >
-          Live Demo
+    <div className="w-2/4 m-2 space-y-1">
+      <h5 className=" text-lg font-medium text-black font-Fira underline hover:text-blue-800 underline-offset-4">
+        <a href={link} target="_blank">
+          {title}
         </a>
-      </div>
+      </h5>
+      <h3 className="font-Source text-sm text-gray-400">{date}</h3>
+      <p className="mb-3 font-Source text-gray-500">{description}</p>
     </div>
   );
 };
