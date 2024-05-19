@@ -3,9 +3,9 @@ import { skills } from "../constants/data";
 
 const Skills = () => {
   return (
-    <div className=" bg-gradient-to-r from-gradient1  to-gray-50 min-h-max px-2 py-10 mt-20 md:mt-10 rounded-xl w-full">
-      <div className="my-4">
-        <h1 className="text-center text-lg font-lexend font-medium text-pri -mt-10">
+    <div className=" min-h-max px-4  mt-10  w-full rounded-lg">
+      <div className="py-4">
+        <h1 className="text-base font-lexend font-medium text-pri ">
           SKILLS AND TOOLS
         </h1>
       </div>

@@ -14,41 +14,42 @@ export const navigation = [
     id: "2",
     title: "Portfolio",
   },
-  {
-    id: "3",
-    title: "Contact",
-  },
 ];
 
 export const projects = [
   {
-    projectName: "Movie App",
+    title: "Movie App",
     description:
       "Cinemate, is a user-friendly website that connects to the TMDB API to fetch movie data. Users can search movies and mark their status (Watched, Watchlist, Hold List).",
     image: p1,
     link: "https://movie-app-bice-five.vercel.app",
+    date: "January 2024",
   },
   {
-    projectName: "Rock-Paper-Scissors",
+    title: "Todo App",
     description:
-      "This application allows users to play the classic game of rock-paper-scissors, aiming for five consecutive wins. Results are displayed after each round for progress tracking.",
+      "Work To Do is a simple task management react application which simplifies task management with intuitive features.",
+    image: p2,
+    link: "https://work-to-do-red.vercel.app",
+    date: "March 2024",
+  },
+  {
+    title: "Rock-Paper-Scissors",
+    description:
+      "This application allows users to play the classic game of rock-paper-scissors, aiming for five consecutive wins.",
     image:
       "https://rock-paper-scissor-game-web-game.netlify.app/image/rock-paper-scissor.png",
     link: "https://rock-paper-scissors-three-smoky.vercel.app/",
+    date: "November 2023",
   },
+
   {
-    projectName: "Todo App",
+    title: "Vowel Counter",
     description:
-      "Work To Do is a simple task management react application which simplifies task management with intuitive features for seamless organization and productivity.",
-    image: p2,
-    link: "https://work-to-do-red.vercel.app",
-  },
-  {
-    projectName: "Vowel Counter",
-    description:
-      "A simple JavaScript program that counts the number of vowels in a given text or phrase. It disregards punctuation marks, spaces, and other non-alphabetic characters.",
+      "A simple JavaScript program that counts the number of vowels in a given text or phrase.",
     image: p3,
     link: "#vowel-counter",
+    date: "November 2023",
   },
 ];
 export const skills = [

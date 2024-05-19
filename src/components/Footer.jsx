@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <footer className="p-4 text-center md:flex justify-center bg-primary ssm:flex  flex">
+    <footer className="p-4 text-center justify-center flex">
       <div>
         <p className="font-thin font-sans w-max text-center">
           © 2024 Laxmi Lamichhane. All Rights Reserved
