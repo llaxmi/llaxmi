@@ -8,7 +8,7 @@ const AboutMe = () => {
       className="justify-center items-center flex flex-wrap flex-col"
     >
       <PageTitle title="ABOUT ME" />
-      <main className="max-w-6xl px-2 min-h-80 flex justify-center flex-col">
+      <main className="max-w-6xl min-h-80 flex justify-center flex-col">
         <section className="mt-8 bg-gradient-to-r from-gray-400  to-primary p-4 rounded-md">
           <h2 className=" leading-snug  font-medium text-white font-pixel text-3xl text-center">
             Welcome to my digital playground! 👩🏻‍💻
