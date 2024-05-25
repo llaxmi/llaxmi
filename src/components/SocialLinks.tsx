@@ -10,7 +10,7 @@ import {
 
 export const SocialLinks = () => {
   return (
-    <div className="flex my-4 space-x-4 cursor-pointer align-bottom w-full">
+    <div className="flex my-4 space-x-2 cursor-pointer align-bottom w-full">
       <IconContext.Provider value={{ size: "5rem" }}>
         <a href={GITHUB_URL} target="_blank">
           <BsGithub size={22} />
