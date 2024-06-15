@@ -70,24 +70,12 @@ export const skills = [
     alt: "TypeScript",
   },
   {
-    src: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/C_Programming_Language.svg/1853px-C_Programming_Language.svg.png",
-    alt: "C",
-  },
-  {
     src: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/ISO_C%2B%2B_Logo.svg/1822px-ISO_C%2B%2B_Logo.svg.png",
     alt: "C++",
   },
   {
-    src: "https://icons.veryicon.com/png/o/file-type/file-type-icon-library/java-14.png",
-    alt: "Java",
-  },
-  {
     src: "https://seeklogo.com/images/R/react-logo-65B7CD91B5-seeklogo.com.png",
     alt: "React/ReactNative",
-  },
-  {
-    src: "https://cdn.iconscout.com/icon/free/png-256/free-node-js-3628954-3030179.png?f=webp",
-    alt: "NodeJS",
   },
   {
     src: "https://icons.veryicon.com/png/o/business/office-icon-series/css-3-4.png",
