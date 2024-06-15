@@ -1,21 +1,17 @@
-import SocialLinks from "../components/SocialLinks.jsx";
+import Name from "../components/Name.tsx";
+import SocialLinks from "../components/SocialLinks.tsx";
 
 const Home = () => {
   return (
-    <div
-      id="home"
-      className=" flex flex-col lg:w-4/5 self-center mt-8 p-4 lg:ml-40"
-    >
-      <h1 className="text-2xl font-bold text-gray-800 font-lexend mt-2">
-        Laxmi Lamichhane
-      </h1>
+    <div id="home" className=" flex flex-col lg:w-4/5 self-center p-2 lg:ml-40">
+      <Name text="Laxmi Lamichhane" />
       <section>
-        <p className="font-lexend text-pri mt-4 text-justify text-lg">
+        <p className="font-lexend text-pri text-justify text-lg px-4">
           a passionate software engineering student with a big passion for
           learning and creating cool stuff.
         </p>
       </section>
-      <section className="mt-6">
+      <section className="mt-2 px-4 text-right max-w-6xl ">
         <h2 className="text-lg font-medium font-lexend">Connect with Me</h2>
         <SocialLinks />
       </section>

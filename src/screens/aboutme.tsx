@@ -9,8 +9,8 @@ const AboutMe = () => {
     >
       <PageTitle title="ABOUT ME" />
       <main className="max-w-6xl min-h-80 flex justify-center flex-col">
-        <section className="mt-8 bg-gradient-to-r from-gray-400  to-primary p-4 rounded-md">
-          <h2 className=" leading-snug  font-medium text-white font-pixel text-3xl text-center">
+        <section className="mt-8 rounded-md  border-gray-100 bg-gray-50 p-4 transition-all hover:scale-105 duration-500 shadow-inner">
+          <h2 className="leading-snug font-medium text-gray-500 font-pixel text-3xl ">
             Welcome to my digital playground! 👩🏻‍💻
           </h2>
           <p className="font-lexend text-lg text-sec leading-relaxed mt-4">

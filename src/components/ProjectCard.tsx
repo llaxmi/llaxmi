@@ -7,8 +7,8 @@ const ProjectCard = ({
   date,
 }: (typeof projects)[0]) => {
   return (
-    <div className="px-2">
-      <div className="w-full space-y-2 ">
+    <div className="px-4">
+      <div className="w-full space-y-1 ">
         <h5 className=" text-lg font-medium text-black font-Fira underline hover:text-blue-800 underline-offset-4">
           <a href={link} target="_blank">
             {title}
