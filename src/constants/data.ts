@@ -70,6 +70,10 @@ export const skills = [
     alt: "TypeScript",
   },
   {
+    src: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/C_Programming_Language.svg/1853px-C_Programming_Language.svg.png",
+    alt: "C",
+  },
+  {
     src: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/ISO_C%2B%2B_Logo.svg/1822px-ISO_C%2B%2B_Logo.svg.png",
     alt: "C++",
   },
@@ -82,11 +86,19 @@ export const skills = [
     alt: "CSS",
   },
   {
+    src: "https://cdn-icons-png.flaticon.com/512/732/732212.png",
+    alt: "HTML",
+  },
+  {
     src: "https://res.cloudinary.com/startup-grind/image/upload/c_fill,w_500,h_500,g_center/c_fill,dpr_2.0,f_auto,g_center,q_auto:good/v1/gcs/platform-data-dsc/events/Tailwind_CSS_Logo.svg_GkNDLAs.png",
     alt: "Tailwind",
   },
   {
     src: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Git_icon.svg/2048px-Git_icon.svg.png",
     alt: "Git",
+  },
+  {
+    src: "https://icons.veryicon.com/png/o/business/vscode-program-item-icon/storybook.png",
+    alt: "Storybook",
   },
 ];

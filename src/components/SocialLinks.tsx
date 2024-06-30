@@ -1,10 +1,10 @@
 import { IconContext } from "react-icons";
-import { BsFacebook, BsGithub, BsInstagram } from "react-icons/bs";
+import { BsGithub, BsInstagram, BsLinkedin } from "react-icons/bs";
 import { LuMail } from "react-icons/lu";
 import {
-  FACEBOOK_URL,
   GITHUB_URL,
   INSTAGRAM_URL,
+  LINKEDIN_URL,
   MAIL,
 } from "../constants/url";
 
@@ -20,19 +20,20 @@ export const SocialLinks = () => {
           <BsGithub size={22} />
         </a>
         <a
+          href={LINKEDIN_URL}
+          target="_blank"
+          className="hover:scale-125 transition duration-500"
+        >
+          <BsLinkedin size={22} />
+        </a>
+        <a
           href={INSTAGRAM_URL}
           target="_blank"
           className="hover:scale-125 transition duration-500"
         >
           <BsInstagram size={22} />
         </a>
-        <a
-          href={FACEBOOK_URL}
-          target="_blank"
-          className="hover:scale-125 transition duration-500"
-        >
-          <BsFacebook size={22} />
-        </a>
+
         <a
           href={`mailto:${MAIL}`}
           target="_blank"
