@@ -12,9 +12,7 @@ export default function Name({ text }: { text: string }) {
       <div className={`h-[10px] overflow-hidden delay-200 ${animation}`}>
         {content}
       </div>
-      <div className={`h-[10px] overflow-hidden delay-100 ${animation}`}>
-        {content}
-      </div>
+
       <div className={`h-[10px] overflow-hidden delay-75 ${animation}`}>
         {content}
       </div>

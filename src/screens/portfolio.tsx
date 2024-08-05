@@ -18,7 +18,7 @@ const Portfolio = () => {
               title={title.title}
               description={title.description}
               link={title.link}
-              image={title.image}
+              // image={title.image}
             />
           );
         })}

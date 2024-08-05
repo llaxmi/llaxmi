@@ -1,6 +1,4 @@
-import p1 from "../assets/p1.png";
-import p2 from "../assets/p2.jpeg";
-import p3 from "../assets/p3.png";
+import p4 from "../assets/p4.png";
 export const navigation = [
   {
     id: "0",
@@ -26,36 +24,44 @@ export const fadeinSkills = {
 
 export const projects = [
   {
-    title: "Movie App",
+    title: "🗺 Wander Pokhara",
+    description:
+      "Wander Pokhara is a web application designed to help users discover and add unexplored destinations they discover.It provides information about the region, including its history, culture, and attractions. Users can also share their experiences with others.",
+    image: p4,
+    link: "https://github.com/llaxmi/wander-pokhara.git",
+    date: "Aug 2024",
+  },
+  {
+    title: "📽 Movie App",
     description:
       "Cinemate, is a user-friendly website that connects to the TMDB API to fetch movie data. Users can search movies and mark their status (Watched, Watchlist, Hold List).",
-    image: p1,
+    // image: p1,
     link: "https://movie-app-bice-five.vercel.app",
     date: "January 2024",
   },
   {
-    title: "Todo App",
+    title: "📜 Todo App",
     description:
       "Work To Do is a simple task management react application which simplifies task management with intuitive features.",
-    image: p2,
+    // image: p2,
     link: "https://work-to-do-red.vercel.app",
     date: "March 2024",
   },
   {
-    title: "Rock-Paper-Scissors",
+    title: "✂️ Rock-Paper-Scissors",
     description:
       "This application allows users to play the classic game of rock-paper-scissors, aiming for five consecutive wins.",
-    image:
-      "https://rock-paper-scissor-game-web-game.netlify.app/image/rock-paper-scissor.png",
+    // image:
+    //   "https://rock-paper-scissor-game-web-game.netlify.app/image/rock-paper-scissor.png",
     link: "https://rock-paper-scissors-three-smoky.vercel.app/",
     date: "November 2023",
   },
 
   {
-    title: "Vowel Counter",
+    title: "🔢 Vowel Counter",
     description:
       "A simple JavaScript program that counts the number of vowels in a given text or phrase.",
-    image: p3,
+    // image: p3,
     link: "#vowel-counter",
     date: "November 2023",
   },
@@ -100,5 +106,13 @@ export const skills = [
   {
     src: "https://icons.veryicon.com/png/o/business/vscode-program-item-icon/storybook.png",
     alt: "Storybook",
+  },
+  {
+    src: "https://img.icons8.com/?size=100&id=hsPbhkOH4FMe&format=png&color=000000",
+    alt: "Node.js",
+  },
+  {
+    src: "https://1000logos.net/wp-content/uploads/2020/08/MongoDB-Logo.png",
+    alt: "MongoDB",
   },
 ];

@@ -15,7 +15,7 @@ const AboutMe = () => {
           </h2>
           <p className="font-lexend text-lg text-sec leading-relaxed mt-4">
             I&apos;m currently cruising through my Software Engineering degree
-            at Gandaki College Of Engineering and Science, a branch of Pokhara
+            at Gandaki College of Engineering and Science, a branch of Pokhara
             University.
           </p>
           <p className="font-lexend text-lg text-sec leading-relaxed mt-4">
