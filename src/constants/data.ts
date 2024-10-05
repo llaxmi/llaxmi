@@ -62,7 +62,7 @@ export const projects = [
     description:
       "A simple JavaScript program that counts the number of vowels in a given text or phrase.",
     // image: p3,
-    link: "#vowel-counter",
+    link: "https://vowel-counter-wheat.vercel.app",
     date: "November 2023",
   },
 ];

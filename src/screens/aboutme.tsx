@@ -19,10 +19,9 @@ const AboutMe = () => {
             University.
           </p>
           <p className="font-lexend text-lg text-sec leading-relaxed mt-4">
-            With a passion for app development and a sprinkle of joy found in
-            web development,
-            <br /> I&apos;m always exploring the endless possibilities of the
-            digital world.
+            With a passion for both app and web development, I love exploring AI
+            and creating innovative solutions that push the boundaries of
+            technology and open up endless possibilities in the digital world.
           </p>
         </section>
         <Skills />
