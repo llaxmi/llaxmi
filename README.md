@@ -3,7 +3,7 @@
 
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=llaxmi&label=Profile%20views&color=0e75b6&style=flat" alt="llaxmi" /> </p>
 
-- 🌱 I’m currently learning **node.js.**
+- 🌱 I’m currently exploring **AI**
 
 - 👨‍💻 All of my projects are available at [https://www.laxmilamichhane.com.np](https://www.laxmilamichhane.com.np)
 
