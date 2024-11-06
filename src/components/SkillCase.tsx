@@ -5,7 +5,7 @@ import { fadeinSkills, skills } from "../constants/data";
 const SkillCase = ({ items }: { items: typeof skills }) => {
   return (
     <div className="h-max w-full">
-      <div className="mx-auto grid max-w-lg lg:grid-cols-4 grid-cols-4 md:grid-cols-4 items-center gap-x-4 gap-y-10 sm:max-w-xl sm:grid-cols-3 sm:gap-x-8 lg:mx-0 lg:max-w-none ">
+      <div className="mx-auto grid max-w-lg lg:grid-cols-4 grid-cols-4 md:grid-cols-4 items-center gap-x-4 gap-y-14 sm:max-w-xl sm:grid-cols-3 sm:gap-x-8 lg:mx-0 lg:max-w-none ">
         {items.map((item, index) => (
           <ul key={`alt_${index}`}>
             <motion.li

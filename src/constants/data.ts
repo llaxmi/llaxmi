@@ -1,4 +1,3 @@
-import p4 from "../assets/p4.png";
 export const navigation = [
   {
     id: "0",
@@ -24,46 +23,36 @@ export const fadeinSkills = {
 
 export const projects = [
   {
+    title: "💡 IdeaPulse",
+    description:
+      "IdeaPulse is a tool designed to help users quickly explore if similar startup ideas have been funded by Y Combinator. It searches a large collection of YC-funded projects and presents insights to help users gauge the potential success of their ideas.",
+    technologies: "React.js, Vite, LangChain, Vector Store, and Ollama models.",
+    link: "https://github.com/llaxmi/wander-pokhara.git",
+    date: "Oct 2024",
+  },
+  {
     title: "🗺 Wander Pokhara",
     description:
-      "Wander Pokhara is a web application designed to help users discover and add unexplored destinations they discover.It provides information about the region, including its history, culture, and attractions. Users can also share their experiences with others.",
-    image: p4,
+      "Wander Pokhara is a web app for travel enthusiasts to discover and share hidden gems in Pokhara, Nepal. Users can find lesser-known destinations, learn about their history and culture, and add their own discoveries to the map. ",
+    technologies: "Express, Node.js, HTML, Tailwind CSS",
     link: "https://github.com/llaxmi/wander-pokhara.git",
     date: "Aug 2024",
   },
   {
-    title: "📽 Movie App",
+    title: "📽 Cinemate",
     description:
-      "Cinemate, is a user-friendly website that connects to the TMDB API to fetch movie data. Users can search movies and mark their status (Watched, Watchlist, Hold List).",
-    // image: p1,
+      "Cinemate is a user-friendly movie site that connects to a public movie database (TMDB API). Users can easily search for movies, add them to a watchlist, or mark them as watched, making it simple to keep track of what they want to watch next.",
+    technologies: "React, Tailwind CSS, JavaScript",
     link: "https://movie-app-bice-five.vercel.app",
     date: "January 2024",
   },
   {
     title: "📜 Todo App",
     description:
-      "Work To Do is a simple task management react application which simplifies task management with intuitive features.",
-    // image: p2,
+      "Work To Do is a straightforward task management app that lets users easily add, organize, and complete tasks. The app’s simple design makes it ideal for quickly managing daily to-dos.",
+    technologies: "React, JavaScript, CSS",
     link: "https://work-to-do-red.vercel.app",
     date: "March 2024",
-  },
-  {
-    title: "✂️ Rock-Paper-Scissors",
-    description:
-      "This application allows users to play the classic game of rock-paper-scissors, aiming for five consecutive wins.",
-    // image:
-    //   "https://rock-paper-scissor-game-web-game.netlify.app/image/rock-paper-scissor.png",
-    link: "https://rock-paper-scissors-three-smoky.vercel.app/",
-    date: "November 2023",
-  },
-
-  {
-    title: "🔢 Vowel Counter",
-    description:
-      "A simple JavaScript program that counts the number of vowels in a given text or phrase.",
-    // image: p3,
-    link: "https://vowel-counter-wheat.vercel.app",
-    date: "November 2023",
   },
 ];
 export const skills = [

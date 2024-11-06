@@ -8,12 +8,14 @@ export default function Name({ text }: { text: string }) {
   );
 
   return (
-    <div className="group relative w-full justify-end overflow-hidden p-4">
+    <div className="group  relative w-full justify-end overflow-hidden p-4">
       <div className={`h-[10px] overflow-hidden delay-200 ${animation}`}>
         {content}
       </div>
 
-      <div className={`h-[10px] overflow-hidden delay-75 ${animation}`}>
+      <div
+        className={`font-poppins h-[10px] overflow-hidden delay-75 ${animation}`}
+      >
         {content}
       </div>
       <div className={animation}>{content}</div>

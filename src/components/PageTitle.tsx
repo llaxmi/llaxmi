@@ -7,8 +7,8 @@ const PageTitle = ({ title }: { title: string }) => {
   };
 
   return (
-    <div>
-      <h1 className="text-left text-3xl font-lexend font-semibold opacity-5 mt-8">
+    <div className="my-4">
+      <h1 className="text-left text-3xl font-lexend font-semibold opacity-5 mt-8 ">
         {title}
       </h1>
       <motion.h1

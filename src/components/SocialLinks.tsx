@@ -1,12 +1,7 @@
 import { IconContext } from "react-icons";
-import { BsGithub, BsInstagram, BsLinkedin } from "react-icons/bs";
+import { BsGithub, BsLinkedin, BsTwitterX } from "react-icons/bs";
 import { LuMail } from "react-icons/lu";
-import {
-  GITHUB_URL,
-  INSTAGRAM_URL,
-  LINKEDIN_URL,
-  MAIL,
-} from "../constants/url";
+import { GITHUB_URL, LINKEDIN_URL, MAIL, X } from "../constants/url";
 
 export const SocialLinks = () => {
   return (
@@ -17,29 +12,28 @@ export const SocialLinks = () => {
           target="_blank"
           className="hover:scale-125 transition duration-500"
         >
-          <BsGithub size={22} />
+          <BsGithub size={24} />
         </a>
         <a
           href={LINKEDIN_URL}
           target="_blank"
           className="hover:scale-125 transition duration-500"
         >
-          <BsLinkedin size={22} />
+          <BsLinkedin size={24} />
         </a>
         <a
-          href={INSTAGRAM_URL}
+          href={X}
           target="_blank"
           className="hover:scale-125 transition duration-500"
         >
-          <BsInstagram size={22} />
+          <BsTwitterX size={24} />
         </a>
-
         <a
           href={`mailto:${MAIL}`}
           target="_blank"
           className="hover:scale-125 transition duration-500"
         >
-          <LuMail size={22} />
+          <LuMail size={24} />
         </a>
       </IconContext.Provider>
     </div>

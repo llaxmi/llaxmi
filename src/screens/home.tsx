@@ -3,7 +3,10 @@ import SocialLinks from "../components/SocialLinks.tsx";
 
 const Home = () => {
   return (
-    <div id="home" className=" flex flex-col lg:w-4/5 self-center p-2 lg:ml-40">
+    <div
+      id="home"
+      className="flex flex-col lg:w-4/5 w-4/5 mt-8 max-w-6xl min-h-50 py-2 self-center"
+    >
       <Name text="Laxmi Lamichhane" />
       <section>
         <p className="font-lexend text-pri text-justify text-lg px-4">
