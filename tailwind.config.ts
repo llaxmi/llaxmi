@@ -7,8 +7,6 @@ export default {
         primary: "#EEEDEB",
         secondary: "#A9A9A9",
         tertiary: "#030637",
-        gradient1: "#bac5de",
-        gradient2: "#dedede",
       },
       textColor: {
         pri: "#102C57",
@@ -16,10 +14,8 @@ export default {
         tert: "#F7EFE5",
       },
       fontFamily: {
-        lexend: "Lexend, sans-serif",
-        poppins: "Poppins, sans-serif",
-        dancing: "Dancing Script, cursive",
-        pixel: "Pixelify Sans, sans-serif",
+        pixel: ["Pixelify Sans", "sans-serif"],
+        marcellus: ["Marcellus", "serif"],
       },
     },
   },

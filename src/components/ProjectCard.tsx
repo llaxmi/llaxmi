@@ -1,3 +1,5 @@
+import { BsGithub } from "react-icons/bs";
+import { Link } from "react-router-dom";
 import { projects } from "../constants/data";
 
 const ProjectCard = ({
@@ -8,17 +10,27 @@ const ProjectCard = ({
   technologies,
 }: (typeof projects)[0]) => {
   return (
-    <div className="px-4">
-      <div className="w-full space-y-2 ">
-        <h5 className=" text-lg font-medium text-black font-Fira underline hover:text-blue-800 underline-offset-4">
-          <a href={link} target="_blank">
+    <div className="flex flex-col gap-4 p-6 bg-white shadow-md rounded-lg hover:shadow-lg transition-shadow">
+      {/* Title and Date */}
+      <div>
+        <div className="flex items-center">
+          <h3 className="text-[22px] flex-1 font-semibold text-pri hover:text-blue-800 hover:underline hover:underline-offset-4 font-marcellus">
             {title}
-          </a>
-        </h5>
-        <h3 className="font-Source text-sm text-gray-400">{date}</h3>
-        <p className="mb-3 font-Source text-gray-500">{description}</p>
-        <p className="mb-3 font-normal italic text-gray-500">
-          Technologies used: {technologies}
+          </h3>
+          <Link to={link} className="ml-auto">
+            <BsGithub size={20} />
+          </Link>
+        </div>
+
+        <p className="text-sm text-gray-500">{date}</p>
+      </div>
+      {/* Description */}
+      <p className="text-gray-800 font-marcellus">{description}</p>
+      {/* Technologies */}
+      <div className="mt-auto gap-1 items-center">
+        <p className="text-sm font-medium text-gray-700">
+          <span className="font-semibold text-pri">Technologies:</span>
+          {technologies}
         </p>
       </div>
     </div>

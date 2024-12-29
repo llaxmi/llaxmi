@@ -23,17 +23,25 @@ export const fadeinSkills = {
 
 export const projects = [
   {
+    title: "📲 BMI",
+    description:
+      "BMI is a simple mobile app that helps users calculate their BMI (Body Mass Index) based on their height and weight. It provides a clear and concise display of the user's BMI, making it easy to understand and interpret.",
+    technologies: "reactnative, JavaScript, Tailwind CSS",
+    link: "https://github.com/llaxmi/bmi-native.git",
+    date: "Dec 2024",
+  },
+  {
     title: "💡 IdeaPulse",
     description:
-      "IdeaPulse is a tool designed to help users quickly explore if similar startup ideas have been funded by Y Combinator. It searches a large collection of YC-funded projects and presents insights to help users gauge the potential success of their ideas.",
+      "IdeaPulse is a tool designed to help users quickly explore if similar startup ideas have been funded by Y Combinator. It searches a large collection of YC-funded projects and presents insights.",
     technologies: "React.js, Vite, LangChain, Vector Store, and Ollama models.",
-    link: "https://github.com/llaxmi/wander-pokhara.git",
+    link: "https://github.com/llaxmi/IdeaPulse.git",
     date: "Oct 2024",
   },
   {
     title: "🗺 Wander Pokhara",
     description:
-      "Wander Pokhara is a web app for travel enthusiasts to discover and share hidden gems in Pokhara, Nepal. Users can find lesser-known destinations, learn about their history and culture, and add their own discoveries to the map. ",
+      "Wander Pokhara is a web app for travel enthusiasts to discover and share hidden gems in Pokhara, Nepal. Users can find lesser-known destinations, learn about their history and culture. ",
     technologies: "Express, Node.js, HTML, Tailwind CSS",
     link: "https://github.com/llaxmi/wander-pokhara.git",
     date: "Aug 2024",
@@ -41,15 +49,15 @@ export const projects = [
   {
     title: "📽 Cinemate",
     description:
-      "Cinemate is a user-friendly movie site that connects to a public movie database (TMDB API). Users can easily search for movies, add them to a watchlist, or mark them as watched, making it simple to keep track of what they want to watch next.",
+      "Cinemate is a user-friendly movie site that connects to a public movie database (TMDB API). Users can easily search for movies, add them to a watchlist, or mark them as watched.",
     technologies: "React, Tailwind CSS, JavaScript",
-    link: "https://movie-app-bice-five.vercel.app",
+    link: "https://github.com/llaxmi/MovieApp.git",
     date: "January 2024",
   },
   {
     title: "📜 Todo App",
     description:
-      "Work To Do is a straightforward task management app that lets users easily add, organize, and complete tasks. The app’s simple design makes it ideal for quickly managing daily to-dos.",
+      "Work To Do is a task management web app that lets users easily add, organize, and complete tasks. The app’s simple design makes it ideal for quickly managing daily to-dos.",
     technologies: "React, JavaScript, CSS",
     link: "https://work-to-do-red.vercel.app",
     date: "March 2024",

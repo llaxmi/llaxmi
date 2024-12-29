@@ -8,11 +8,11 @@ const PageTitle = ({ title }: { title: string }) => {
 
   return (
     <div className="my-4">
-      <h1 className="text-left text-3xl font-lexend font-semibold opacity-5 mt-8 ">
+      <h1 className="text-left text-5xl font-marcellus font-semibold opacity-10 mt-8 ">
         {title}
       </h1>
       <motion.h1
-        className="text-center text-2xl font-lexend font-semibold text-pri -mt-8"
+        className="text-center text-3xl font-marcellus text-orange-600 -mt-8"
         variants={titleVariants}
         initial="initial"
         whileInView="animate"

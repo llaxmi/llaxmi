@@ -6,25 +6,23 @@ const Portfolio = () => {
   return (
     <div
       id="portfolio"
-      className="justify-center items-center flex flex-col p-4 self-center"
+      className="flex flex-col items-center justify-center p-8"
     >
       <PageTitle title="PROJECTS" />
-      <div className="relative pl-2 grid gap-y-12 after:absolute after:inset-y-0 after:left-0 after:w-px after:bg-gray-500/30 self-center lg:w-4/6 -ml-10">
-        {projects.map((title) => {
-          return (
-            <ProjectCard
-              key={title.title}
-              date={title.date}
-              title={title.title}
-              description={title.description}
-              link={title.link}
-              technologies={title.technologies}
-              // image={title.image}
-            />
-          );
-        })}
+      <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-12 w-full max-w-6xl">
+        {projects.map((project) => (
+          <ProjectCard
+            key={project.title}
+            date={project.date}
+            title={project.title}
+            description={project.description}
+            link={project.link}
+            technologies={project.technologies}
+          />
+        ))}
       </div>
     </div>
   );
 };
+
 export default Portfolio;
