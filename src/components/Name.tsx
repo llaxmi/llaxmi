@@ -8,7 +8,7 @@ export default function Name({ text }: { text: string }) {
   );
 
   return (
-    <div className="group relative w-full justify-end overflow-hidden p-2">
+    <div className="font-marcellus group relative w-full justify-end overflow-hidden p-2">
       <div className={`h-[10px] overflow-hidden delay-200 ${animation}`}>
         {content}
       </div>
