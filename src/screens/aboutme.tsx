@@ -9,7 +9,7 @@ const AboutMe = () => {
     >
       <PageTitle title="ABOUT ME" />
       <main className="max-w-6xl min-h-80 flex justify-center flex-col">
-        <section className="mt-8 rounded-md  border-gray-100 bg-gray-50 p-4 transition-all hover:scale-105 duration-500 shadow-inner">
+        <section className="mt-8 rounded-md border-gray-100 bg-gray-50 p-4 transition-all hover:scale-105 duration-500 shadow-inner">
           <h2 className="leading-snug font-semibold text-gray-500 font-pixel text-3xl">
             Welcome to my digital playground! 👩🏻‍💻
           </h2>

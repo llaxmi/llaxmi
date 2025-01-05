@@ -23,6 +23,14 @@ export const fadeinSkills = {
 
 export const projects = [
   {
+    title: "📄 Summarizer",
+    description:
+      "The File Summarizer is a web-app, simplifies document analysis by generating concise summaries, leveraging OpenAI's model and LangChain for efficient text processing. Ideal for professionals, students, and researchers.",
+    technologies: "Next.js, OpenAI Model, LangChain. Tailwind CSS",
+    link: "https://github.com/llaxmi/summarizer",
+    date: "Jan 2025",
+  },
+  {
     title: "📲 BMI",
     description:
       "BMI is a simple mobile app that helps users calculate their BMI (Body Mass Index) based on their height and weight. It provides a clear and concise display of the user's BMI, making it easy to understand and interpret.",
@@ -111,5 +119,13 @@ export const skills = [
   {
     src: "https://1000logos.net/wp-content/uploads/2020/08/MongoDB-Logo.png",
     alt: "MongoDB",
+  },
+  {
+    src: "https://cdn.worldvectorlogo.com/logos/react-native-1.svg",
+    alt: "React Native",
+  },
+  {
+    src: "https://media.licdn.com/dms/image/v2/D4D12AQF8MwWNbgUZ_g/article-cover_image-shrink_600_2000/article-cover_image-shrink_600_2000/0/1697534805076?e=2147483647&v=beta&t=oidQ7KQtMb1CVUj-mRzfSaKSFlAHdvzu4z0FZ1VsU10",
+    alt: "Langchain",
   },
 ];

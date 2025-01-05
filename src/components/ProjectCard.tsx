@@ -17,7 +17,7 @@ const ProjectCard = ({
           <h3 className="text-[22px] flex-1 font-semibold text-pri hover:text-blue-800 hover:underline hover:underline-offset-4 font-marcellus">
             {title}
           </h3>
-          <Link to={link} className="ml-auto">
+          <Link to={link} className="ml-auto cursor-pointer">
             <BsGithub size={20} />
           </Link>
         </div>
