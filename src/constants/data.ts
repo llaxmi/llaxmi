@@ -1,3 +1,9 @@
+import p2 from "../assets/bmi.png";
+import p5 from "../assets/cine.png";
+import p3 from "../assets/ideapulse.png";
+import p1 from "../assets/summarizer.png";
+import p4 from "../assets/wander.png";
+
 export const navigation = [
   {
     id: "0",
@@ -26,33 +32,37 @@ export const projects = [
     title: "📄 Summarizer",
     description:
       "The File Summarizer is a web-app, simplifies document analysis by generating concise summaries, leveraging OpenAI's model and LangChain for efficient text processing. Ideal for professionals, students, and researchers.",
-    technologies: "Next.js, OpenAI Model, LangChain. Tailwind CSS",
+    technologies: "Next.js, OpenAI Model, LangChain, Tailwind CSS",
     link: "https://github.com/llaxmi/summarizer",
     date: "Jan 2025",
+    image: p1,
   },
   {
     title: "📲 BMI",
     description:
       "BMI is a simple mobile app that helps users calculate their BMI (Body Mass Index) based on their height and weight. It provides a clear and concise display of the user's BMI, making it easy to understand and interpret.",
-    technologies: "reactnative, JavaScript, Tailwind CSS",
+    technologies: "reactnative, JavaScript,Tailwind CSS",
     link: "https://github.com/llaxmi/bmi-native.git",
     date: "Dec 2024",
+    image: p2,
   },
   {
     title: "💡 IdeaPulse",
     description:
       "IdeaPulse is a tool designed to help users quickly explore if similar startup ideas have been funded by Y Combinator. It searches a large collection of YC-funded projects and presents insights.",
-    technologies: "React.js, Vite, LangChain, Vector Store, and Ollama models.",
+    technologies: "React.js, Vite, LangChain,Ollama, Vector Store",
     link: "https://github.com/llaxmi/IdeaPulse.git",
     date: "Oct 2024",
+    image: p3,
   },
   {
     title: "🗺 Wander Pokhara",
     description:
       "Wander Pokhara is a web app for travel enthusiasts to discover and share hidden gems in Pokhara, Nepal. Users can find lesser-known destinations, learn about their history and culture. ",
-    technologies: "Express, Node.js, HTML, Tailwind CSS",
+    technologies: "Express, Node.js, Tailwind CSS,HTML",
     link: "https://github.com/llaxmi/wander-pokhara.git",
     date: "Aug 2024",
+    image: p4,
   },
   {
     title: "📽 Cinemate",
@@ -61,14 +71,7 @@ export const projects = [
     technologies: "React, Tailwind CSS, JavaScript",
     link: "https://github.com/llaxmi/MovieApp.git",
     date: "January 2024",
-  },
-  {
-    title: "📜 Todo App",
-    description:
-      "Work To Do is a task management web app that lets users easily add, organize, and complete tasks. The app’s simple design makes it ideal for quickly managing daily to-dos.",
-    technologies: "React, JavaScript, CSS",
-    link: "https://work-to-do-red.vercel.app",
-    date: "March 2024",
+    image: p5,
   },
 ];
 export const skills = [

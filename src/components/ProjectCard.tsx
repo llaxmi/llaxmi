@@ -8,17 +8,19 @@ const ProjectCard = ({
   link,
   date,
   technologies,
+  image,
 }: (typeof projects)[0]) => {
   return (
-    <div className="flex flex-col gap-4 p-6 bg-white shadow-md rounded-lg hover:shadow-lg transition-shadow">
-      {/* Title and Date */}
+    <div className="flex flex-col gap-4 px-6 py-4 shadow-md rounded-lg hover:shadow-lg transition-shadow">
+      {/* Image */}
+      <img src={image} alt={title} className="mt-4 h-min w-full" />
       <div>
         <div className="flex items-center">
-          <h3 className="text-[22px] flex-1 font-semibold text-pri hover:text-blue-800 hover:underline hover:underline-offset-4 font-marcellus">
+          <h3 className="text-[22px] flex-1 font-bold text-pri hover:text-blue-800 hover:underline hover:underline-offset-4 font-marcellus">
             {title}
           </h3>
           <Link to={link} className="ml-auto cursor-pointer">
-            <BsGithub size={20} />
+            <BsGithub size={22} />
           </Link>
         </div>
 
@@ -27,12 +29,16 @@ const ProjectCard = ({
       {/* Description */}
       <p className="text-gray-800 font-marcellus">{description}</p>
       {/* Technologies */}
-      <div className="mt-auto gap-1 items-center">
-        <p className="text-sm font-medium text-gray-700">
-          <span className="font-semibold text-pri">Technologies:</span>
-          {technologies}
-        </p>
-      </div>
+      <p>
+        {technologies.split(",").map((tech, index) => (
+          <span
+            key={`tech_${index}`}
+            className="inline-block font-mono bg-orange-500/90 rounded-full px-3 py-1 text-xs font-medium text-white mr-2 mb-2"
+          >
+            {tech}
+          </span>
+        ))}
+      </p>
     </div>
   );
 };
