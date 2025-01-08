@@ -8,13 +8,13 @@ const PageTitle = ({ title }: { title: string }) => {
 
   return (
     <div className="flex flex-col items-center justify-center my-8">
-      <h1 className="text-5xl font-marcellus font-semibold opacity-10 mt-8">
+      <h1 className="text-4xl md:text-5xl font-marcellus font-semibold opacity-10 mt-8">
         {title}
       </h1>
 
       {/* Animated main title */}
       <motion.h1
-        className="text-3xl font-marcellus text-orange-600 -mt-8"
+        className="md:text-3xl text-2xl font-marcellus text-orange-600 -mt-8"
         variants={titleVariants}
         initial="initial"
         whileInView="animate"

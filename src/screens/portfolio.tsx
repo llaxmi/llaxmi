@@ -18,6 +18,7 @@ const Portfolio = () => {
             description={project.description}
             link={project.link}
             technologies={project.technologies}
+            image={project.image}
           />
         ))}
       </div>
