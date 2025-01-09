@@ -5,7 +5,7 @@ import { projects } from "../constants/data";
 const Portfolio = () => {
   return (
     <div
-      id="portfolio"
+      id="projects"
       className="flex flex-col items-center justify-center p-8"
     >
       <PageTitle title="PROJECTS" />
