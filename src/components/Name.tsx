@@ -2,7 +2,7 @@ export default function Name({ text }: { text: string }) {
   const animation =
     "group-hover:-translate-y-4 ease-slow transition-all duration-500";
   const content = (
-    <div className="inline-block text-4xl font-normal uppercase leading-none text-blue-900 text-center">
+    <div className="inline-block text-3xl md:text-4xl font-normal uppercase leading-none text-blue-900 text-center">
       {text}
     </div>
   );

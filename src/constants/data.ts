@@ -15,7 +15,7 @@ export const navigation = [
   },
   {
     id: "2",
-    title: "Portfolio",
+    title: "Projects",
   },
 ];
 export const fadeinSkills = {

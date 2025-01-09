@@ -15,7 +15,7 @@ const NavBar = () => {
               spy={true}
               smooth={true}
               offset={5}
-              className="text-xl font-marcellus font-normal mx-2 text-black hover:bg-slate-200 rounded-lg p-2 cursor-pointer"
+              className="text-[18px] md:text-xl font-marcellus font-normal mx-2 text-black hover:bg-slate-200 rounded-lg p-2 cursor-pointer"
             >
               {item.title}
             </Link>
