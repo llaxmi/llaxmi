@@ -1,3 +1,10 @@
+import c1 from "../assets/achievements/LUD.jpeg";
+import c2 from "../assets/achievements/cfc.jpeg";
+import c4 from "../assets/achievements/hoc.jpg";
+import ideathon from "../assets/achievements/ideathon.jpg";
+import mentor from "../assets/achievements/mentor.png";
+import sisu from "../assets/achievements/sisu.jpeg";
+
 import p2 from "../assets/bmi.png";
 import p5 from "../assets/cine.png";
 import p3 from "../assets/ideapulse.png";
@@ -16,6 +23,10 @@ export const navigation = [
   {
     id: "2",
     title: "Projects",
+  },
+  {
+    id: "3",
+    title: "Achievements",
   },
 ];
 export const fadeinSkills = {
@@ -130,5 +141,50 @@ export const skills = [
   {
     src: "https://media.licdn.com/dms/image/v2/D4D12AQF8MwWNbgUZ_g/article-cover_image-shrink_600_2000/article-cover_image-shrink_600_2000/0/1697534805076?e=2147483647&v=beta&t=oidQ7KQtMb1CVUj-mRzfSaKSFlAHdvzu4z0FZ1VsU10",
     alt: "Langchain",
+  },
+];
+export const certificates = [
+  {
+    id: "1",
+    title: "Hour of Code",
+    issuer: "Code.org",
+    date: "Jan 2025",
+    imageUrl: c4,
+  },
+  {
+    id: "2",
+    title: "Codefest- HACKATHON 2024",
+    issuer: "Code For Change",
+    date: "Dec 2024",
+    imageUrl: c2,
+  },
+  {
+    id: "3",
+    title: "Git & Github Mentor",
+    issuer: "Gces Girls Tech",
+    date: "Dec 2024",
+    imageUrl: mentor,
+  },
+  {
+    id: "4",
+    title: "Provincial Ideathon",
+    issuer: "CFC",
+    date: "Nov 2024",
+    imageUrl: ideathon,
+  },
+
+  {
+    id: "5",
+    title: "30 Days Learning Challange",
+    issuer: "KEC",
+    date: "Sep-Oct 2024",
+    imageUrl: c1,
+  },
+  {
+    id: "6",
+    title: "Project Exhibition",
+    issuer: "10th GCES IT Expo",
+    date: "June 2023",
+    imageUrl: sisu,
   },
 ];

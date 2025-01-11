@@ -4,9 +4,9 @@ import CV from "../assets/Laxmi_CV.pdf";
 const ResumeButton = ({ title }: { title: string }) => {
   return (
     <a
-      className="inline-flex font-marcellus items-center rounded-md bg-blue-900 my-2 hover:bg-gray-800 px-4 py-[3px] font-SourcePro text-sm font-normal text-white shadow-sm  "
+      className="inline-flex font-sans font-medium items-center rounded-md bg-blue-900 my-2 hover:bg-gray-800 px-4 py-[3px]  text-sm  text-white shadow-sm  "
       href={CV}
-      download="CV"
+      download="Laxmi_CV"
     >
       <LuDownload size={16} className="mx-1" />
       {title}
