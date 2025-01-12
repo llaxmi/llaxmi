@@ -11,10 +11,10 @@ const ProjectCard = ({
   image,
 }: (typeof projects)[0]) => {
   return (
-    <div className="flex flex-col gap-4 px-6 py-4 shadow-md rounded-lg hover:shadow-lg transition-shadow">
+    <div className="flex flex-col gap-4 py-4 shadow-md rounded-lg hover:shadow-lg transition-shadow">
       {/* Image */}
-      <img src={image} alt={title} className="mt-4 h-min w-full" />
-      <div>
+      <img src={image} alt={title} className="h-min w-full object-contain" />
+      <div className="px-4">
         <div className="flex items-center">
           <h3 className="text-[22px] flex-1 font-bold text-pri hover:text-blue-800 hover:underline hover:underline-offset-4 font-marcellus">
             {title}
@@ -27,9 +27,9 @@ const ProjectCard = ({
         <p className="text-sm text-gray-500">{date}</p>
       </div>
       {/* Description */}
-      <p className="text-gray-800 font-marcellus">{description}</p>
+      <p className="text-gray-800 font-marcellus px-4">{description}</p>
       {/* Technologies */}
-      <p>
+      <p className="px-4">
         {technologies.split(",").map((tech, index) => (
           <span
             key={`tech_${index}`}
