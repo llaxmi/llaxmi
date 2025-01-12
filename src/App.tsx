@@ -1,7 +1,7 @@
 import Footer from "./components/Footer";
 import NavBar from "./components/NavBar";
 import AboutMe from "./screens/aboutme";
-import { Achievement } from "./screens/Achievement";
+import { Achievement } from "./screens/achievement";
 import Home from "./screens/home";
 import Portfolio from "./screens/portfolio";
 const App = () => {
