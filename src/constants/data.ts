@@ -13,10 +13,6 @@ import p4 from "../assets/wander.png";
 
 export const navigation = [
   {
-    id: "0",
-    title: "Home",
-  },
-  {
     id: "1",
     title: "About",
   },

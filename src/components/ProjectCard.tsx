@@ -27,7 +27,9 @@ const ProjectCard = ({
         <p className="text-sm text-gray-500">{date}</p>
       </div>
       {/* Description */}
-      <p className="text-gray-800 font-marcellus px-4">{description}</p>
+      <p className="text-gray-800 font-marcellus px-4 line-clamp-3 md:line-clamp-none">
+        {description}
+      </p>
       {/* Technologies */}
       <p className="px-4">
         {technologies.split(",").map((tech, index) => (

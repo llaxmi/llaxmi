@@ -41,7 +41,7 @@ export function Certificate({
       </div>
 
       {/* Certificate details */}
-      <div className="w-full flex flex-col items-start mb-8 px-8 -mt-4">
+      <div className="w-full flex flex-col items-start  px-8 -mt-4">
         <h3 className="text-2xl font-bold text-pri font-marcellus">{title}</h3>
         <div className="flex items-center mt-1">
           <Award className="w-4 h-4 mr-2 text-pri" />
@@ -61,7 +61,7 @@ export function Certificate({
         >
           <div
             ref={modalRef}
-            className="bg-white p-4 rounded-lg relative"
+            className="bg-white p-4  relative"
             onClick={(e) => e.stopPropagation()} // Prevent closing when clicking inside the modal
           >
             <button

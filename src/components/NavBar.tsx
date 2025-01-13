@@ -4,9 +4,9 @@ import ResumeButton from "./ResumeButton";
 
 const NavBar = () => {
   return (
-    <div className="flex justify-center">
-      <nav className="pt-4 self-center px-2 flex flex-1 max-w-6xl justify-between">
-        <div className="flex">
+    <div className="fixed top-0 w-full bg-white shadow-md z-10 py-2 justify-center flex items-center">
+      <nav className=" self-center px-2 flex flex-1 max-w-6xl justify-between">
+        <div className="flex flex-wrap">
           {navigation.map((item) => (
             <Link
               key={`link_${item.id}`}
@@ -15,7 +15,7 @@ const NavBar = () => {
               spy={true}
               smooth={true}
               offset={5}
-              className="text-[18px] md:text-xl font-marcellus font-normal mx-2 text-black hover:bg-slate-200 rounded-lg p-2 cursor-pointer"
+              className="text-sm md:text-xl font-marcellus font-normal mx-2 text-black hover:bg-slate-100 rounded-lg p-2 cursor-pointer"
             >
               {item.title}
             </Link>
