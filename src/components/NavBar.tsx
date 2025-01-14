@@ -4,8 +4,8 @@ import ResumeButton from "./ResumeButton";
 
 const NavBar = () => {
   return (
-    <div className="fixed top-0 w-full bg-white shadow-md z-10 py-2 justify-center flex items-center">
-      <nav className=" self-center px-2 flex flex-1 max-w-6xl justify-between">
+    <div className="fixed top-0 w-full shadow-md bg-white border-0 z-10 py-2 justify-center flex items-center">
+      <nav className="self-center px-2 flex flex-1 max-w-6xl justify-between">
         <div className="flex flex-wrap">
           {navigation.map((item) => (
             <Link

@@ -138,6 +138,10 @@ export const skills = [
     src: "https://media.licdn.com/dms/image/v2/D4D12AQF8MwWNbgUZ_g/article-cover_image-shrink_600_2000/article-cover_image-shrink_600_2000/0/1697534805076?e=2147483647&v=beta&t=oidQ7KQtMb1CVUj-mRzfSaKSFlAHdvzu4z0FZ1VsU10",
     alt: "Langchain",
   },
+  {
+    src: "https://a.storyblok.com/f/172506/1280x800/00901d9ffe/next-js-logo.webp",
+    alt: "Next.js",
+  },
 ];
 export const certificates = [
   {
