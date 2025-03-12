@@ -4,25 +4,23 @@ import ResumeButton from "./ResumeButton";
 
 const NavBar = () => {
   return (
-    <div className="fixed top-0 w-full shadow-md bg-white border-0 z-10 py-2 justify-center flex items-center">
-      <nav className="self-center px-2 flex flex-1 max-w-6xl justify-between">
-        <div className="flex flex-wrap">
-          {navigation.map((item) => (
-            <Link
-              key={`link_${item.id}`}
-              activeClass="active"
-              to={item.title.toLowerCase()}
-              spy={true}
-              smooth={true}
-              offset={5}
-              className="text-sm md:text-xl font-marcellus font-normal mx-2 text-black hover:bg-slate-100 rounded-lg p-2 cursor-pointer"
-            >
-              {item.title}
-            </Link>
-          ))}
-        </div>
+    <div className="bg-slate-50 w-full z-50 fixed p-8">
+      <div className="fixed top-4 left-1/2 transform -translate-x-1/2 bg-white shadow-lg rounded-full px-6 flex gap-4 items-center z-50 border border-gray-200">
+        {navigation.map((item) => (
+          <Link
+            key={`link_${item.id}`}
+            activeClass="active"
+            to={item.title.toLowerCase()}
+            spy={true}
+            smooth={true}
+            offset={5}
+            className="text-sm md:text-base font-marcellus font-normal text-black hover:text-blue-500 cursor-pointer"
+          >
+            {item.title}
+          </Link>
+        ))}
         <ResumeButton title="CV" />
-      </nav>
+      </div>
     </div>
   );
 };
