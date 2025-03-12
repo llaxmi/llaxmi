@@ -15,11 +15,11 @@ export default function Card({ aiName = "AI name" }: AboutMeProps) {
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{
-        delay: 0.5,
+        delay: 0.4,
         type: "spring",
         stiffness: 100,
         damping: 10,
-        duration: 0.6,
+        duration: 0.8,
       }}
       className="relative max-w-6xl overflow-hidden rounded-lg bg-[gray-200/95] shadow-md text-blue-950/95 my-10"
       role="alert"
@@ -37,7 +37,7 @@ export default function Card({ aiName = "AI name" }: AboutMeProps) {
           className="relative mb-4 flex items-center"
         >
           <div className="relative mr-3">
-            <div className="flex h-10 w-10 items-center justify-center rounded-md bg-blue-950/95 text-xl font-bold text-white">
+            <div className="flex h-8 w-8 items-center justify-center rounded-md bg-blue-950/95 text-xl font-bold text-white">
               L
             </div>
           </div>
@@ -81,7 +81,7 @@ export default function Card({ aiName = "AI name" }: AboutMeProps) {
               }}
               className="mb-4 pl-12 text-gray-700 dark:text-gray-300"
             >
-              <p className="text-blue-950/95 font-marcellus md:text-xl text-lg">
+              <p className="text-blue-950/95 font-marcellus md:text-xl text-base">
                 I’m Laxmi Lamichhane, a Software Engineeirng student at Gandaki
                 College of Engineering and Science.
                 <span className="inline-flex pt-4">
