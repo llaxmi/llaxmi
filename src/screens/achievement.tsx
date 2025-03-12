@@ -14,7 +14,7 @@ export function Achievement() {
   return (
     <div
       id="achievements"
-      className="flex flex-col items-center justify-center"
+      className="flex flex-col items-center justify-center mt-2"
     >
       <PageTitle title="Achievements" />
       <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full max-w-6xl">
