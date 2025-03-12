@@ -37,7 +37,7 @@ export default function Card({ aiName = "AI name" }: AboutMeProps) {
           className="relative mb-4 flex items-center"
         >
           <div className="relative mr-3">
-            <div className="flex h-8 w-8 items-center justify-center rounded-md bg-blue-950/95 text-xl font-bold text-white">
+            <div className="flex h-10 w-10 items-center justify-center rounded-md bg-blue-950/95 text-xl font-bold text-white">
               L
             </div>
           </div>

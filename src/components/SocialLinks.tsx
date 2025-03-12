@@ -5,7 +5,7 @@ import { GITHUB_URL, LINKEDIN_URL, MAIL, X } from "../constants/url";
 
 export const SocialLinks = () => {
   return (
-    <div className="flex my-4 space-x-2 cursor-pointer align-bottom max-w-6xl justify-end">
+    <div className="flex space-x-2 cursor-pointer align-bottom max-w-6xl justify-end">
       <IconContext.Provider value={{ size: "5rem" }}>
         <a
           href={GITHUB_URL}
