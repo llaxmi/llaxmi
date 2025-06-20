@@ -9,8 +9,6 @@
 
 📫 How to reach me **ll4xmi@gmail.com**
 
-⚡ Fun fact **I'm an avid star gazer.**
-
 <h3 align="left">Connect with me:</h3>
 <p align="left">
 <a href="https://linkedin.com/in/laxmi-lamichhane-15a27630a" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="laxmi-lamichhane-15a27630a" height="30" width="40" /></a>
