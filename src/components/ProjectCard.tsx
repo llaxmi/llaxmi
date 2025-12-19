@@ -15,7 +15,7 @@ const ProjectCard = ({
 }: ProjectCardProps) => {
   return (
     <div
-      className={`group flex flex-col dark:bg-blue-950/40 text-gray-900 dark:text-white rounded-2xl transition-all duration-300  border border-gray-100/80 dark:border-gray-700/60`}
+      className={`group flex flex-col bg-blue-950/40 text-white rounded-2xl transition-all duration-300 border  border-gray-700/60`}
     >
       {/* Image Container */}
       <div className={`relative overflow-hidden ${IMAGE_HEIGHT}`}>
@@ -30,7 +30,7 @@ const ProjectCard = ({
       <div className="flex flex-col p-5 gap-3">
         <div className="space-y-1">
           <div className="flex items-center justify-between gap-2 mb-2">
-            <h3 className="text-xl md:text-2xl font-bold text-gray-900 dark:text-white transition-colors font-marcellus flex-1">
+            <h3 className="text-xl md:text-2xl font-bold text-white transition-colors font-marcellus flex-1">
               {title}
             </h3>
             {githubLink && (
@@ -38,23 +38,20 @@ const ProjectCard = ({
                 href={githubLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2 bg-white/90 dark:bg-gray-900/70 backdrop-blur-md rounded-full shadow-lg hover:bg-blue-50 dark:hover:bg-gray-800 transition-colors ml-2"
+                className="p-2 bg-gray-900/70 backdrop-blur-md rounded-full shadow-lghover:bg-gray-800 transition-colors ml-2"
                 aria-label={`View ${title} on GitHub`}
               >
-                <BsGithub
-                  size={20}
-                  className="text-gray-900 dark:text-gray-100"
-                />
+                <BsGithub size={20} className="text-gray-100" />
               </a>
             )}
           </div>
-          <p className="text-xs mb-2 md:text-sm text-slate-500 dark:text-slate-300 font-mono font-semibold">
+          <p className="text-xs mb-2 md:text-sm text-slate-400 font-mono font-semibold">
             {date}
           </p>
         </div>
 
         {/* Description */}
-        <p className="text-slate-700 dark:text-slate-200 font-marcellus text-sm md:text-base">
+        <p className="text-slate-200 font-marcellus text-sm md:text-base">
           {description}
         </p>
 
@@ -65,7 +62,7 @@ const ProjectCard = ({
             return (
               <span
                 key={trimmedTech}
-                className="inline-block font-mono bg-blue-50 text-blue-900 dark:bg-blue-700/30 dark:text-blue-100 rounded-full px-3 py-1 text-xs font-medium shadow-md border border-blue-100/80 dark:border-blue-800/70"
+                className="inline-block font-mono bg-blue-100/90 text-blue-950  rounded-full px-3 py-1 text-xs font-medium shadow-md border border-blue-300/80"
               >
                 {trimmedTech}
               </span>

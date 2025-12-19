@@ -7,7 +7,7 @@ import Portfolio from "./screens/portfolio";
 
 const App = () => {
   return (
-    <div className="flex flex-col min-h-screen bg-white dark:bg-gray-900 transition-colors duration-300">
+    <div className="flex flex-col min-h-screen bg-gray-900 transition-colors duration-300">
       <NavBar />
       <main className="flex flex-col">
         <Home />

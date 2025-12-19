@@ -34,7 +34,7 @@ const Home = () => {
             transition={{ delay: 0.2, duration: 0.6 }}
             className="space-y-2"
           >
-            <p className="text-base xs:text-lg md:text-xl font-marcellus text-gray-700 dark:text-gray-300 font-semibold">
+            <p className="text-base xs:text-lg md:text-xl font-marcellus text-gray-300 font-semibold">
               Hii, I'm
             </p>
             <h1 className="text-3xl xs:text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold font-marcellus bg-yellow-600 bg-clip-text text-transparent drop-shadow-sm">
@@ -48,7 +48,7 @@ const Home = () => {
             transition={{ delay: 0.4, duration: 0.6 }}
             className="h-8 md:h-10"
           >
-            <p className="text-lg xs:text-xl md:text-2xl lg:text-3xl font-marcellus text-pri dark:text-gray-100 font-semibold">
+            <p className="text-lg xs:text-xl md:text-2xl lg:text-3xl font-marcellus text-gray-100 font-semibold">
               <Typewriter
                 words={[
                   "Full Stack Developer",
@@ -71,7 +71,7 @@ const Home = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6, duration: 0.6 }}
-            className="text-sm xs:text-base md:text-lg font-marcellus dark:text-gray-200 max-w-lg xs:max-w-xl text-left sm:max-w-2xl leading-relaxed px-1 sm:px-0"
+            className="text-sm xs:text-base md:text-lg font-marcellus text-gray-200 max-w-lg xs:max-w-xl text-left sm:max-w-2xl leading-relaxed px-1 sm:px-0"
           >
             A passionate software engineering student and Full Stack Developer
             at SyncGTM, driven by a love for learning and building cool things.
@@ -114,7 +114,7 @@ const Home = () => {
           className="relative mt-8 lg:mt-0 w-full flex justify-center lg:justify-end lg:w-2/5"
         >
           <div className="relative w-40 h-40 xs:w-56 xs:h-56 sm:w-64 sm:h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 mx-auto">
-            <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-white dark:border-gray-800 shadow-2xl">
+            <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-gray-800 shadow-2xl">
               <img
                 src={meImage}
                 alt="Laxmi Lamichhane"
@@ -125,14 +125,14 @@ const Home = () => {
             <motion.div
               animate={{ y: [0, -10, 0] }}
               transition={{ duration: 3, repeat: Infinity }}
-              className="absolute -top-3 -right-3 xs:-top-4 xs:-right-4 bg-white dark:bg-gray-600 rounded-full p-2 xs:p-3 shadow-lg"
+              className="absolute -top-3 -right-3 xs:-top-4 xs:-right-4 bg-gray-600 rounded-full p-2 xs:p-3 shadow-lg"
             >
               <span className="text-xl xs:text-2xl">🇳🇵</span>
             </motion.div>
             <motion.div
               animate={{ y: [0, -10, 0] }}
               transition={{ duration: 3, repeat: Infinity, delay: 1 }}
-              className="absolute -bottom-3 -left-3 xs:-bottom-4 xs:-left-4 bg-white dark:bg-gray-600 rounded-full p-2 xs:p-3 shadow-lg"
+              className="absolute -bottom-3 -left-3 xs:-bottom-4 xs:-left-4 bg-gray-600 rounded-full p-2 xs:p-3 shadow-lg"
             >
               <span className="text-xl xs:text-2xl">🚀</span>
             </motion.div>

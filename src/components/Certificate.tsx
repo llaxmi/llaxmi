@@ -1,5 +1,5 @@
 import { Award, Calendar, X } from "lucide-react";
-import { useState, useCallback, useEffect } from "react";
+import { useCallback, useEffect, useState } from "react";
 
 interface CertificateProps {
   title: string;
