@@ -19,7 +19,6 @@ const Portfolio = () => {
               title={project.title}
               description={project.description}
               githubLink={project.githubLink}
-              liveLink={project.liveLink}
               technologies={project.technologies}
               image={project.image}
             />

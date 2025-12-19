@@ -50,18 +50,6 @@ const ProjectCard = ({
                 />
               </a>
             )}
-            {/* 
-            <a
-              href={liveLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-xs text-slate-900 font-mono font-semibold rounded-full bg-blue-100 px-2 py-1 shadow-sm transition-colors hover:bg-blue-200 hover:text-blue-900 cursor-pointer flex items-center gap-1"
-              aria-label={`View ${title} live`}
-            >
-              <span className="text-slate-900">View Live</span>
-              <LuArrowUpRight size={16} className="text-slate-900" />
-            </a> 
-            */}
           </div>
           <p className="text-xs mb-2 md:text-sm text-slate-500 dark:text-slate-300 font-mono font-semibold">
             {date}
