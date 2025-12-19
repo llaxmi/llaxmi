@@ -1,28 +1,29 @@
 import { motion } from "framer-motion";
 
-const PageTitle = ({ title }: { title: string }) => {
-  const titleVariants = {
-    initial: { opacity: 0, x: -50 },
-    animate: { opacity: 1, x: 0, transition: { duration: 1 } },
-  };
+interface PageTitleProps {
+  title: string;
+  description?: string;
+}
 
+const PageTitle = ({ title, description }: PageTitleProps) => {
   return (
-    <div className="flex flex-col items-center justify-center my-8">
-      <h1 className="text-4xl md:text-5xl font-marcellus font-semibold opacity-10 mt-8">
-        {title}
-      </h1>
-
-      {/* Animated main title */}
-      <motion.h1
-        className="md:text-3xl text-2xl font-marcellus text-orange-600 -mt-8"
-        variants={titleVariants}
-        initial="initial"
-        whileInView="animate"
-        viewport={{ once: true }}
-      >
-        {title}
-      </motion.h1>
-    </div>
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.6 }}
+      className="text-center mt-16 mb-8"
+    >
+      <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold font-marcellus">
+        <span className="bg-yellow-600 bg-clip-text text-transparent">
+          {title}
+        </span>
+      </h2>
+      <p className="text-gray-300 font-marcellus text-lg md:text-xl mb-4">
+        {description}
+      </p>
+      <div className="w-24 h-1 bg-yellow-600 mx-auto rounded-full" />
+    </motion.div>
   );
 };
 

@@ -1,28 +1,29 @@
-/* eslint-disable react/prop-types */
-import { motion } from "framer-motion";
-import { fadeinSkills, skills } from "../constants/data";
+import { Skill } from "../constants/data";
 
-const SkillCase = ({ items }: { items: typeof skills }) => {
+interface SkillCaseProps {
+  items: Skill[];
+}
+
+const SkillCase = ({ items }: SkillCaseProps) => {
   return (
-    <div className="h-max w-full">
-      <div className="mx-auto grid max-w-lg lg:grid-cols-4 grid-cols-4 md:grid-cols-4 items-center gap-x-4 gap-y-14 sm:max-w-xl sm:grid-cols-3 sm:gap-x-8 lg:mx-0 lg:max-w-none ">
-        {items.map((item, index) => (
-          <ul key={`alt_${index}`}>
-            <motion.li
-              variants={fadeinSkills}
-              initial="initial"
-              whileInView="animate"
-              viewport={{ once: true }}
-              custom={index}
-              whileHover={{ scale: 1.3 }}
-            >
+    <div className=" w-full">
+      <div className="mx-auto grid max-w-5xl grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-7 items-center gap-6 md:gap-8 lg:gap-10">
+        {items.map((item) => (
+          <div
+            key={item.alt}
+            className="flex flex-col items-center justify-center"
+          >
+            <div className="p-3 rounded-xl bg-white shadow-md transition-all duration-300 border border-gray-200">
               <img
-                className="col-span-1 max-h-12 w-full object-contain lg:col-span-1"
+                className="max-h-12 md:max-h-14 w-full object-contain"
                 src={item.src}
                 alt={item.alt}
               />
-            </motion.li>
-          </ul>
+            </div>
+            <p className="mt-2 text-xs font-marcellus text-white text-center">
+              {item.alt}
+            </p>
+          </div>
         ))}
       </div>
     </div>

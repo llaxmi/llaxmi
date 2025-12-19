@@ -1,5 +1,23 @@
-export const GITHUB_URL = "https://github.com/llaxmi";
-export const LINKEDIN_URL =
-  "https://www.linkedin.com/in/laxmi-lamichhane-15a27630a/";
-export const MAIL = "lc.llaxmi@gmail.com";
-export const X = "https://x.com/ll4xmii";
+export interface SocialLink {
+  label: string;
+  url: string;
+}
+
+export const socialLinks: SocialLink[] = [
+  {
+    label: "Github",
+    url: "https://github.com/llaxmi",
+  },
+  {
+    label: "LinkedIn",
+    url: "https://linkedin.com/in/llaxmi/",
+  },
+  {
+    label: "Twitter",
+    url: "https://x.com/ll4xmii",
+  },
+  {
+    label: "Mail",
+    url: "llaxmii.dev@gmail.com",
+  },
+];

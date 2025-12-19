@@ -7,40 +7,70 @@ import sisu from "../assets/achievements/sisu.jpeg";
 
 import p2 from "../assets/bmi.png";
 import p5 from "../assets/cine.png";
+import p6 from "../assets/gena.png";
 import p3 from "../assets/ideapulse.png";
 import p1 from "../assets/summarizer.png";
 import p4 from "../assets/wander.png";
 
-export const navigation = [
+export interface NavigationItem {
+  title: string;
+}
+
+export interface Project {
+  title: string;
+  description: string;
+  technologies: string;
+  githubLink: string;
+  liveLink: string;
+  date: string;
+  image: string;
+}
+
+export interface Skill {
+  src: string;
+  alt: string;
+}
+
+export interface Certificate {
+  id: string;
+  title: string;
+  issuer: string;
+  date: string;
+  imageUrl: string;
+}
+
+export const navigation: NavigationItem[] = [
   {
-    id: "1",
-    title: "About",
+    title: "Skills",
   },
   {
-    id: "2",
     title: "Projects",
   },
   {
-    id: "3",
     title: "Achievements",
   },
 ];
-export const fadeinSkills = {
-  initial: { opacity: 0, y: 100 },
-  animate: (index: number) => ({
-    opacity: 1,
-    y: 0,
-    transition: { delay: 0.05 * index },
-  }),
-};
 
-export const projects = [
+export const projects: Project[] = [
+  {
+    title: "📄 GENA: AI Quiz Generator",
+    description:
+      "GENA is an AI-powered web app that helps students learn by automatically generating personalized quizzes from study material.",
+    technologies: `
+     Next.js, TypeScript, Tailwind CSS, Prisma, PostgreSQL, Ollama, Docker
+    `,
+    githubLink: "https://github.com/llaxmi/GENA",
+    liveLink: "https://gena.vercel.app/",
+    date: "Nov 2025",
+    image: p6,
+  },
   {
     title: "📄 Summarizer",
     description:
-      "The File Summarizer is a web-app, simplifies document analysis by generating concise summaries, leveraging OpenAI's model and LangChain for efficient text processing. Ideal for professionals, students, and researchers.",
+      "The File Summarizer is a web-app, simplifies document analysis by generating concise summaries, leveraging OpenAI's model and LangChain.",
     technologies: "Next.js, OpenAI Model, LangChain, Tailwind CSS",
-    link: "https://github.com/llaxmi/summarizer",
+    githubLink: "https://github.com/llaxmi/summarizer",
+    liveLink: "https://summarizer.vercel.app/",
     date: "Jan 2025",
     image: p1,
   },
@@ -49,16 +79,18 @@ export const projects = [
     description:
       "BMI is a simple mobile app that helps users calculate their BMI (Body Mass Index) based on their height and weight. It provides a clear and concise display of the user's BMI, making it easy to understand and interpret.",
     technologies: "reactnative, JavaScript,Tailwind CSS",
-    link: "https://github.com/llaxmi/bmi-native.git",
+    githubLink: "https://github.com/llaxmi/bmi-native.git",
+    liveLink: "https://bmi-native.vercel.app/",
     date: "Dec 2024",
     image: p2,
   },
   {
     title: "💡 IdeaPulse",
     description:
-      "IdeaPulse is a tool designed to help users quickly explore if similar startup ideas have been funded by Y Combinator. It searches a large collection of YC-funded projects and presents insights.",
+      "IdeaPulse is a tool that helps users quickly explore if similar startup ideas have been funded by Y Combinator. It searches through a large collection of YC-funded projects.",
     technologies: "React.js, Vite, LangChain,Ollama, Vector Store",
-    link: "https://github.com/llaxmi/IdeaPulse.git",
+    githubLink: "https://github.com/llaxmi/IdeaPulse.git",
+    liveLink: "https://idea-pulse.vercel.app/",
     date: "Oct 2024",
     image: p3,
   },
@@ -67,7 +99,8 @@ export const projects = [
     description:
       "Wander Pokhara is a web app for travel enthusiasts to discover and share hidden gems in Pokhara, Nepal. Users can find lesser-known destinations, learn about their history and culture. ",
     technologies: "Express, Node.js, Tailwind CSS,HTML",
-    link: "https://github.com/llaxmi/wander-pokhara.git",
+    githubLink: "https://github.com/llaxmi/wander-pokhara.git",
+    liveLink: "https://wander-pokhara.vercel.app/",
     date: "Aug 2024",
     image: p4,
   },
@@ -76,12 +109,13 @@ export const projects = [
     description:
       "Cinemate is a user-friendly movie site that connects to a public movie database (TMDB API). Users can easily search for movies, add them to a watchlist, or mark them as watched.",
     technologies: "React, Tailwind CSS, JavaScript",
-    link: "https://github.com/llaxmi/MovieApp.git",
+    githubLink: "https://github.com/llaxmi/MovieApp.git",
+    liveLink: "https://movie-app-bice-five.vercel.app/",
     date: "January 2024",
     image: p5,
   },
 ];
-export const skills = [
+export const skills: Skill[] = [
   {
     src: "https://icons.veryicon.com/png/o/application/skills-section/javascript-1.png",
     alt: "JavaScript",
@@ -99,8 +133,12 @@ export const skills = [
     alt: "C++",
   },
   {
-    src: "https://seeklogo.com/images/R/react-logo-65B7CD91B5-seeklogo.com.png",
-    alt: "React/ReactNative",
+    src: "https://images-cdn.openxcell.com/wp-content/uploads/2024/07/25082439/reactnative-inner.svg",
+    alt: "ReactNative",
+  },
+  {
+    src: "https://www.devtopics.com/wp-content/uploads/2023/01/React-icon.svg_.png",
+    alt: "Reactjs",
   },
   {
     src: "https://icons.veryicon.com/png/o/business/office-icon-series/css-3-4.png",
@@ -111,7 +149,7 @@ export const skills = [
     alt: "HTML",
   },
   {
-    src: "https://res.cloudinary.com/startup-grind/image/upload/c_fill,w_500,h_500,g_center/c_fill,dpr_2.0,f_auto,g_center,q_auto:good/v1/gcs/platform-data-dsc/events/Tailwind_CSS_Logo.svg_GkNDLAs.png",
+    src: "https://codekitapp.com/images/help/free-tailwind-icon@2x.png",
     alt: "Tailwind",
   },
   {
@@ -127,23 +165,23 @@ export const skills = [
     alt: "Node.js",
   },
   {
-    src: "https://1000logos.net/wp-content/uploads/2020/08/MongoDB-Logo.png",
+    src: "https://d2lgmzy8vjj79z.cloudfront.net/mongodb.svg",
     alt: "MongoDB",
   },
   {
-    src: "https://cdn.worldvectorlogo.com/logos/react-native-1.svg",
-    alt: "React Native",
+    src: "https://res.cloudinary.com/dg3gyk0gu/image/upload/v1683914713/tags/tanstack.png",
+    alt: "Tanstack Query",
   },
   {
     src: "https://media.licdn.com/dms/image/v2/D4D12AQF8MwWNbgUZ_g/article-cover_image-shrink_600_2000/article-cover_image-shrink_600_2000/0/1697534805076?e=2147483647&v=beta&t=oidQ7KQtMb1CVUj-mRzfSaKSFlAHdvzu4z0FZ1VsU10",
     alt: "Langchain",
   },
   {
-    src: "https://a.storyblok.com/f/172506/1280x800/00901d9ffe/next-js-logo.webp",
+    src: "https://cdn.worldvectorlogo.com/logos/next-js.svg",
     alt: "Next.js",
   },
 ];
-export const certificates = [
+export const certificates: Certificate[] = [
   {
     id: "1",
     title: "Hour of Code",
