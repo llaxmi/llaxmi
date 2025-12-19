@@ -73,9 +73,10 @@ const Home = () => {
             transition={{ delay: 0.6, duration: 0.6 }}
             className="text-sm xs:text-base md:text-lg font-marcellus dark:text-gray-200 max-w-lg xs:max-w-xl text-left sm:max-w-2xl leading-relaxed px-1 sm:px-0"
           >
-            A passionate software engineering student with a big passion for
-            learning and creating cool stuff. I love turning ideas into reality
-            through code and exploring the endless possibilities of technology.
+            A passionate software engineering student and Full Stack Developer
+            at SyncGTM, driven by a love for learning and building cool things.
+            I enjoy turning ideas into reality through code and continuously
+            exploring the vast possibilities that technology offers.
           </motion.p>
 
           {/* Social Links */}
@@ -100,7 +101,7 @@ const Home = () => {
               className="px-6 py-2 xs:px-8 xs:py-3 bg-blue-950 text-white rounded-full font-marcellus font-semibold shadow-lg hover:shadow-2xl hover:shadow-blue-950/50 transform hover:scale-105 transition-all duration-300 text-sm xs:text-base"
               aria-label="Navigate to projects section"
             >
-              View My Work
+              View My Projects
             </a>
           </motion.div>
         </motion.div>
@@ -113,10 +114,6 @@ const Home = () => {
           className="relative mt-8 lg:mt-0 w-full flex justify-center lg:justify-end lg:w-2/5"
         >
           <div className="relative w-40 h-40 xs:w-56 xs:h-56 sm:w-64 sm:h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 mx-auto">
-            {/* Glowing background circle */}
-            <div className="absolute inset-0 bg-gradient-to-r from-accent via-accent2 to-accent3 rounded-full blur-2xl opacity-30 animate-glow" />
-
-            {/* Image container */}
             <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-white dark:border-gray-800 shadow-2xl">
               <img
                 src={meImage}
@@ -125,18 +122,17 @@ const Home = () => {
               />
             </div>
 
-            {/* Floating badges */}
             <motion.div
               animate={{ y: [0, -10, 0] }}
               transition={{ duration: 3, repeat: Infinity }}
-              className="absolute -top-3 -right-3 xs:-top-4 xs:-right-4 bg-white dark:bg-gray-800 rounded-full p-2 xs:p-3 shadow-lg"
+              className="absolute -top-3 -right-3 xs:-top-4 xs:-right-4 bg-white dark:bg-gray-600 rounded-full p-2 xs:p-3 shadow-lg"
             >
-              <span className="text-xl xs:text-2xl">👩🏻‍💻</span>
+              <span className="text-xl xs:text-2xl">🇳🇵</span>
             </motion.div>
             <motion.div
               animate={{ y: [0, -10, 0] }}
               transition={{ duration: 3, repeat: Infinity, delay: 1 }}
-              className="absolute -bottom-3 -left-3 xs:-bottom-4 xs:-left-4 bg-white dark:bg-gray-800 rounded-full p-2 xs:p-3 shadow-lg"
+              className="absolute -bottom-3 -left-3 xs:-bottom-4 xs:-left-4 bg-white dark:bg-gray-600 rounded-full p-2 xs:p-3 shadow-lg"
             >
               <span className="text-xl xs:text-2xl">🚀</span>
             </motion.div>

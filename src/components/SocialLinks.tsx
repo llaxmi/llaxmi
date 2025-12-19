@@ -7,7 +7,7 @@ const SocialLinks = () => {
       {socialLinks.map((social) => (
         <div
           key={social.label}
-          className="flex flex-wrap items-center gap-1.5 sm:gap-2 w-full"
+          className="flex flex-wrap font-mono items-center gap-1.5 sm:gap-2 w-full"
         >
           <span className="text-[#6ee7b7]">const</span>
           <span className="mx-0.5 sm:mx-1 text-[#38bdf8]">

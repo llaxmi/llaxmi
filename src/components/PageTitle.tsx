@@ -14,15 +14,13 @@ const PageTitle = ({ title, description }: PageTitleProps) => {
       transition={{ duration: 0.6 }}
       className="text-center mt-16 mb-8"
     >
-      <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold font-marcellus">
-        <span className="bg-yellow-600 bg-clip-text text-transparent">
-          {title}
-        </span>
+      <h2 className="text-3xl text-amber-500 mb-2 md:text-4xl lg:text-5xl font-bold font-marcellus">
+        {title}
       </h2>
       <p className="text-gray-300 font-marcellus text-lg md:text-xl mb-4">
         {description}
       </p>
-      <div className="w-24 h-1 bg-yellow-600 mx-auto rounded-full" />
+      <div className="w-24 h-1 bg-amber-500 mx-auto rounded-full" />
     </motion.div>
   );
 };

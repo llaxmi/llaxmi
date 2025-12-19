@@ -15,18 +15,15 @@ const ProjectCard = ({
 }: ProjectCardProps) => {
   return (
     <div
-      className={`group flex flex-col bg-white/90 dark:bg-gray-900/50 text-gray-900 dark:text-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-100/80 dark:border-gray-700/60 backdrop-blur-md`}
+      className={`group flex flex-col dark:bg-blue-950/40 text-gray-900 dark:text-white rounded-2xl transition-all duration-300  border border-gray-100/80 dark:border-gray-700/60`}
     >
       {/* Image Container */}
-      <div
-        className={`relative overflow-hidden bg-gradient-to-br from-accent/5 via-accent2/10 to-accent3/15 ${IMAGE_HEIGHT}`}
-      >
+      <div className={`relative overflow-hidden ${IMAGE_HEIGHT}`}>
         <img
           src={image}
           alt={title}
           className="w-full h-full object-cover duration-500"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/25 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
       </div>
 
       {/* Content */}
@@ -68,7 +65,7 @@ const ProjectCard = ({
             return (
               <span
                 key={trimmedTech}
-                className="inline-block font-mono bg-blue-50 text-blue-900 dark:bg-blue-900/40 dark:text-blue-100 rounded-full px-3 py-1 text-xs font-medium shadow-md border border-blue-100/80 dark:border-blue-700/70"
+                className="inline-block font-mono bg-blue-50 text-blue-900 dark:bg-blue-700/30 dark:text-blue-100 rounded-full px-3 py-1 text-xs font-medium shadow-md border border-blue-100/80 dark:border-blue-800/70"
               >
                 {trimmedTech}
               </span>
