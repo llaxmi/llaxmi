@@ -19,7 +19,7 @@ const NavBar = () => {
     <nav className="fixed top-4 left-1/2 transform -translate-x-1/2 w-[95vw] max-w-4xl z-50 transition-all">
       <div className="bg-white/90 backdrop-blur-md shadow-2xl rounded-2xl border border-gray-200 mx-auto">
         <div className="px-4 sm:px-8">
-          <div className="flex items-center justify-between h-16">
+          <div className="flex items-center justify-between h-12">
             {/* Logo */}
             <div className="flex items-center">
               <a

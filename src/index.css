@@ -27,12 +27,12 @@
   }
   
   ::-webkit-scrollbar-thumb {
-    background: linear-gradient(to bottom, #FF6B6B, #4ECDC4); /* from-accent to-accent2 */
+    background: linear-gradient(to bottom, #f8f8f8, #b3e1de); /* from-accent to-accent2 */
     border-radius: 9999px;
   }
   
   ::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(to bottom, #4ECDC4, #FF6B6B); /* from-accent2 to-accent */
+    background: linear-gradient(to bottom, #4ECDC4, #cecece); /* from-accent2 to-accent */
   }
 }
 
