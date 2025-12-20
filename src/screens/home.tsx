@@ -2,8 +2,10 @@ import { motion } from "framer-motion";
 import { Typewriter } from "react-simple-typewriter";
 import meImage from "../assets/me.jpeg";
 import SocialLinks from "../components/SocialLinks";
+import { isDecember } from "../utils/isdecember";
 
 const Home = () => {
+  const isDecemberMonth = isDecember();
   return (
     <div
       id="home"
@@ -15,10 +17,6 @@ const Home = () => {
         className="absolute top-28 right-2 w-40 h-40 sm:top-40 sm:right-10 sm:w-72 sm:h-72 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float"
         style={{ animationDelay: "2s" }}
       />
-      <div
-        className="absolute bottom-8 left-1/2 w-40 h-40 sm:bottom-20 sm:left-1/2 sm:w-72 sm:h-72 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float"
-        style={{ animationDelay: "4s", transform: "translateX(-50%)" }}
-      />
 
       <div className="relative z-10 flex flex-col lg:flex-row items-center justify-center gap-6 pt-20 sm:gap-10 lg:gap-20 px-2 sm:px-4 max-w-7xl w-full">
         {/* Left Side - Text Content */}
@@ -26,7 +24,7 @@ const Home = () => {
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
-          className="flex flex-col items-center lg:items-start text-center lg:text-left space-y-6 w-full lg:w-3/5"
+          className="flex flex-col items-center lg:items-start text-center lg:text-left space-y-6 w-full "
         >
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -34,7 +32,21 @@ const Home = () => {
             transition={{ delay: 0.2, duration: 0.6 }}
             className="space-y-2"
           >
-            <p className="text-base xs:text-lg md:text-xl font-marcellus text-gray-300 font-semibold">
+            {isDecemberMonth && (
+              <motion.div
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ delay: 0.1, duration: 0.5 }}
+                className="flex justify-end mb-4"
+              >
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-gradient-to-r from-blue-500/20 to-cyan-500/20 border border-blue-400/30 text-xs xs:text-sm font-marcellus text-cyan-200 shadow-lg backdrop-blur-sm">
+                  <span>❄️</span>{" "}
+                  <span>It's December - Winter Wonderland!</span>{" "}
+                  <span>❄️</span>
+                </span>
+              </motion.div>
+            )}
+            <p className="text-base  xs:text-lg md:text-xl font-marcellus text-gray-300 font-semibold">
               Hii, I'm
             </p>
             <h1 className="text-3xl xs:text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold font-marcellus bg-yellow-600 bg-clip-text text-transparent drop-shadow-sm">
