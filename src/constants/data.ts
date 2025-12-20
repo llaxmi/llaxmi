@@ -46,6 +46,9 @@ export const navigation: NavigationItem[] = [
     title: "Projects",
   },
   {
+    title: "Playground",
+  },
+  {
     title: "Achievements",
   },
 ];

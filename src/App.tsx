@@ -3,6 +3,7 @@ import NavBar from "./components/NavBar";
 import AboutMe from "./screens/aboutme";
 import { Achievement } from "./screens/achievement";
 import Home from "./screens/home";
+import { Playground } from "./screens/playground";
 import Portfolio from "./screens/portfolio";
 
 const App = () => {
@@ -13,6 +14,7 @@ const App = () => {
         <Home />
         <AboutMe />
         <Portfolio />
+        <Playground />
         <Achievement />
       </main>
       <Footer />
