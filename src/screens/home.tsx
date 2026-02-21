@@ -85,8 +85,7 @@ const Home = () => {
             transition={{ delay: 0.6, duration: 0.6 }}
             className="text-sm xs:text-base md:text-lg font-marcellus text-gray-200 max-w-lg xs:max-w-xl text-left sm:max-w-2xl leading-relaxed px-1 sm:px-0"
           >
-            A passionate software engineering student and Full Stack Developer
-            at SyncGTM, driven by a love for learning and building cool things.
+            A passionate software engineering student and Full Stack Developer, driven by a love for learning and building cool things.
             I enjoy turning ideas into reality through code and continuously
             exploring the vast possibilities that technology offers.
           </motion.p>

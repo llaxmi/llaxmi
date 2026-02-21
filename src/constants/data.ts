@@ -5,6 +5,8 @@ import p3 from "../assets/ideapulse.png";
 import p1 from "../assets/summarizer.png";
 import p4 from "../assets/wander.png";
 
+import a1 from "../assets/aircanvas.png";
+import h1 from "../assets/valentine.png";
 export interface NavigationItem {
   title: string;
 }
@@ -160,5 +162,34 @@ export const skills: Skill[] = [
   {
     src: "https://cdn.worldvectorlogo.com/logos/next-js.svg",
     alt: "Next.js",
+  },
+];
+
+export const funProjects: Project[] = [
+  {
+    title: "🎮 Air-Canvas ",
+    description:
+      "Air canvas is a web app that allows you to draw on the air using your webcam.",
+    technologies:
+      "React 19, TypeScript, MediaPipe Hands, React Three Fiber, Three.js, Tailwind CSS",
+    githubLink: "https://github.com/llaxmi/air-canvas.git",
+    date: "Jan 2026",
+    image: a1,
+  },
+  {
+    title: "Valentine's Day Card",
+    description:
+      "Valentine's Day Card is a web app that allows you to send a Valentine's Day card to your loved ones.",
+    technologies: `
+      React 18,
+      Tailwind CSS,
+      Framer Motion,
+      Supabase,
+      Zustand,
+      i18next
+    `,
+    githubLink: "https://github.com/llaxmi/valentine",
+    date: "Feb 2026",
+    image: h1,
   },
 ];
