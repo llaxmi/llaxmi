@@ -1,6 +1,5 @@
 import { LuDownload } from "react-icons/lu";
-import CV from "../assets/LaxmiLc_CV.pdf";
-
+import CV from "../assets/LaxmiLamichhane.pdf";
 interface ResumeButtonProps {
   title: string;
 }
