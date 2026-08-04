@@ -7,6 +7,8 @@ import p4 from "../assets/wander.png";
 
 import a1 from "../assets/aircanvas.png";
 import h1 from "../assets/valentine.png";
+import pa from "../assets/palette.png";
+
 export interface NavigationItem {
   title: string;
 }
@@ -166,6 +168,15 @@ export const skills: Skill[] = [
 ];
 
 export const funProjects: Project[] = [
+  {
+    title: "Color Palette Generator",
+    description:
+      "An editorial colour laboratory — drop any image and extract a five-part Pantone-style palette, adjust tones, and export ready-to-use CSS or Tailwind config.",
+    technologies: "React, Tailwind CSS",
+    githubLink: "https://github.com/llaxmi/palette-picker",
+    date: "Mar 2026",
+    image: pa, 
+  },
   {
     title: "🎮 Air-Canvas ",
     description:
