@@ -1,21 +1,16 @@
-import { motion } from "framer-motion";
+import MonoLabel from "./primitives/MonoLabel";
 
 const Footer = () => {
-  const currentYear = new Date().getFullYear();
+  const year = new Date().getFullYear();
 
   return (
-    <footer className="relative mt-16 py-4 px-4 border-t border-gray-700">
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.5 }}
-        className="max-w-7xl mx-auto text-center"
-      >
-        <p className="font-marcellus text-base md:text-lg text-gray-300">
-          © {currentYear} . All Rights Reserved
-        </p>
-      </motion.div>
+    <footer className="border-t border-rule py-10">
+      <div className="mx-auto flex max-w-shell flex-col gap-3 px-gutter md:flex-row md:items-center md:justify-between">
+        <MonoLabel as="p">
+          Built with Passion.
+        </MonoLabel>
+        <MonoLabel as="p">© {year} Laxmi Lamichhane</MonoLabel>
+      </div>
     </footer>
   );
 };

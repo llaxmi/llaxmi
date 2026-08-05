@@ -1,20 +1,20 @@
-import { LuDownload } from "react-icons/lu";
+import { Download } from "lucide-react";
 import CV from "../assets/LaxmiLamichhane.pdf";
+
 interface ResumeButtonProps {
-  title: string;
+  label?: string;
+  className?: string;
 }
 
-const ResumeButton = ({ title }: ResumeButtonProps) => {
-  return (
-    <a
-      className="inline-flex font-marcellus font-semibold items-center gap-2 rounded-full bg-pri px-4 md:px-6 py-2 text-sm bg-blue-950 md:text-base w-max justify-center text-white shadow-lg"
-      href={CV}
-      download="LaxmiLamichhane_CV"
-    >
-      <LuDownload size={18} />
-      {title}
-    </a>
-  );
-};
+const ResumeButton = ({ label = "CV", className = "" }: ResumeButtonProps) => (
+  <a
+    href={CV}
+    download="LaxmiLamichhane_CV"
+    className={`inline-flex min-h-[44px] items-center gap-2 border border-body px-4 font-mono text-step--1 uppercase tracking-[0.18em] text-body transition-colors duration-200 hover:bg-body hover:text-surface ${className}`}
+  >
+    <Download size={14} aria-hidden />
+    {label}
+  </a>
+);
 
 export default ResumeButton;
