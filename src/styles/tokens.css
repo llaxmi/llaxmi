@@ -1,0 +1,52 @@
+:root {
+  /* Surface colors change together for light and dark sections. */
+  --surface-rgb: 244 241 234;
+  --surface-2-rgb: 212 210 204;
+  --rule-rgb: 151 149 145;
+  --body-rgb: 20 19 15;
+  --muted-rgb: 107 103 92;
+  --accent-text-rgb: 163 46 36;
+  --accent-rgb: 226 72 61;
+
+  /* Selection text stays dark so it remains readable on the accent color. */
+  --selection-ink-rgb: 20 19 15;
+
+  --surface: rgb(var(--surface-rgb));
+  --surface-2: rgb(var(--surface-2-rgb));
+  --rule: rgb(var(--rule-rgb));
+  --body: rgb(var(--body-rgb));
+  --muted: rgb(var(--muted-rgb));
+  --accent-text: rgb(var(--accent-text-rgb));
+  --accent: rgb(var(--accent-rgb));
+  --selection-ink: rgb(var(--selection-ink-rgb));
+
+  --step--1: clamp(0.79rem, 0.77rem + 0.1vw, 0.84rem);
+  --step-0: clamp(1rem, 0.96rem + 0.2vw, 1.13rem);
+  --step-1: clamp(1.27rem, 1.19rem + 0.4vw, 1.5rem);
+  --step-2: clamp(1.6rem, 1.46rem + 0.7vw, 2rem);
+  --step-3: clamp(2.03rem, 1.79rem + 1.2vw, 2.67rem);
+  --step-4: clamp(2.57rem, 2.19rem + 1.9vw, 3.55rem);
+  --display: clamp(3.5rem, 1rem + 11vw, 11rem);
+
+  --gutter: clamp(1rem, 4vw, 2rem);
+  --measure: 65ch;
+}
+
+/* Force light colors inside a dark section. */
+[data-surface="paper"] {
+  --surface-rgb: 244 241 234;
+  --surface-2-rgb: 212 210 204;
+  --rule-rgb: 151 149 145;
+  --body-rgb: 20 19 15;
+  --muted-rgb: 107 103 92;
+  --accent-text-rgb: 163 46 36;
+}
+
+[data-surface="ink"] {
+  --surface-rgb: 20 19 15;
+  --surface-2-rgb: 46 45 41;
+  --rule-rgb: 84 83 79;
+  --body-rgb: 244 241 234;
+  --muted-rgb: 140 134 118;
+  --accent-text-rgb: 226 72 61;
+}

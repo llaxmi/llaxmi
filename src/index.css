@@ -1,46 +1,72 @@
+@import "./styles/tokens.css";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
-  * {
-    @apply scroll-smooth;
+  html {
+    scroll-behavior: smooth;
   }
-  
+
   body {
-    @apply antialiased;
+    /* Deliberately plain CSS rather than `@apply bg-surface text-body`.
+       @apply resolves against tailwind.config.ts at compile time, so a dev
+       server started before a config change holds the stale config in memory
+       and hard-errors with "The `bg-surface` class does not exist" until it is
+       restarted. Reading the custom properties directly has no such coupling —
+       and it matches how ::selection and :focus-visible below already work. */
+    background-color: var(--surface);
+    color: var(--body);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: "Bricolage Grotesque", system-ui, sans-serif;
+    font-size: var(--step-0);
+    line-height: 1.6;
   }
-  
-  /* Custom scrollbar */
+
+  ::selection {
+    background: var(--accent);
+    color: var(--selection-ink);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--accent-text);
+    outline-offset: 3px;
+  }
+
   ::-webkit-scrollbar {
-    width: 8px;
+    width: 10px;
   }
-  
   ::-webkit-scrollbar-track {
-    background-color: rgb(243 244 246); /* gray-100 */
+    background: var(--surface-2);
   }
-  
-  @media (prefers-color-scheme: dark) {
-    ::-webkit-scrollbar-track {
-      background-color: rgb(31 41 55); /* gray-800 */
-    }
-  }
-  
   ::-webkit-scrollbar-thumb {
-    background: linear-gradient(to bottom, #f8f8f8, #b3e1de); /* from-accent to-accent2 */
-    border-radius: 9999px;
+    background: var(--muted);
   }
-  
   ::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(to bottom, #4ECDC4, #cecece); /* from-accent2 to-accent */
+    background: var(--body);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
   }
 }
 
 @layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  .measure {
+    max-width: var(--measure);
   }
-  
+
   @keyframes marquee {
     from {
       transform: translateX(0);
@@ -49,7 +75,7 @@
       transform: translateX(calc(-100% - var(--gap, 1rem)));
     }
   }
-  
+
   .animate-marquee {
     animation: marquee var(--duration, 40s) linear infinite;
   }
