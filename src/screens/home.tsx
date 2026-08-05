@@ -1,156 +1,97 @@
-import { motion } from "framer-motion";
-import { Typewriter } from "react-simple-typewriter";
+import { motion, useReducedMotion } from "framer-motion";
+import { ArrowDown } from "lucide-react";
+import { Link } from "react-scroll";
 import meImage from "../assets/me.jpeg";
-import SocialLinks from "../components/SocialLinks";
-import { isDecember } from "../utils/isdecember";
+import RevealText from "../components/primitives/RevealText";
 
 const Home = () => {
-  const isDecemberMonth = isDecember();
+  const reduce = useReducedMotion();
+
   return (
-    <div
-      id="home"
-      className="relative flex p-3 flex-col items-center justify-center min-h-screen w-full overflow-hidden"
-    >
-      {/* Floating Orbs - adjust for mobile */}
-      <div className="absolute top-10 left-2 w-40 h-40 sm:top-20 sm:left-10 sm:w-72 sm:h-72 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float" />
-      <div
-        className="absolute top-28 right-2 w-40 h-40 sm:top-40 sm:right-10 sm:w-72 sm:h-72 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float"
-        style={{ animationDelay: "2s" }}
-      />
-
-      <div className="relative z-10 flex flex-col lg:flex-row items-center justify-center gap-6 pt-20 sm:gap-10 lg:gap-20 px-2 sm:px-4 max-w-7xl w-full">
-        {/* Left Side - Text Content */}
+    <section id="home" className="relative border-b border-rule">
+      <div className="grid grid-cols-1 md:grid-cols-[minmax(260px,34%)_1fr] md:min-h-[100dvh]">
         <motion.div
-          initial={{ opacity: 0, x: -50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8 }}
-          className="flex flex-col items-center lg:items-start text-center lg:text-left space-y-6 w-full "
-        >
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2, duration: 0.6 }}
-            className="space-y-2"
-          >
-            {isDecemberMonth && (
-              <motion.div
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ delay: 0.1, duration: 0.5 }}
-                className="flex justify-end mb-4"
-              >
-                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-gradient-to-r from-blue-500/20 to-cyan-500/20 border border-blue-400/30 text-xs xs:text-sm font-marcellus text-cyan-200 shadow-lg backdrop-blur-sm">
-                  <span>❄️</span>{" "}
-                  <span>It's December - Winter Wonderland!</span>{" "}
-                  <span>❄️</span>
-                </span>
-              </motion.div>
-            )}
-            <p className="text-base  xs:text-lg md:text-xl font-marcellus text-gray-300 font-semibold">
-              Hii, I'm
-            </p>
-            <h1 className="text-3xl xs:text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold font-marcellus bg-yellow-600 bg-clip-text text-transparent drop-shadow-sm">
-              Laxmi Lamichhane
-            </h1>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4, duration: 0.6 }}
-            className="h-8 md:h-10"
-          >
-            <p className="text-lg xs:text-xl md:text-2xl lg:text-3xl font-marcellus text-gray-100 font-semibold">
-              <Typewriter
-                words={[
-                  "Full Stack Developer",
-                  "Software Engineering Student",
-                  "AI Enthusiast",
-                  "Creative Problem Solver",
-                  "Tech Explorer",
-                ]}
-                loop={true}
-                cursor
-                cursorStyle="|"
-                typeSpeed={70}
-                deleteSpeed={50}
-                delaySpeed={2000}
-              />
-            </p>
-          </motion.div>
-
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.6, duration: 0.6 }}
-            className="text-sm xs:text-base md:text-lg font-marcellus text-gray-200 max-w-lg xs:max-w-xl text-left sm:max-w-2xl leading-relaxed px-1 sm:px-0"
-          >
-            A passionate software engineering student and Full Stack Developer, driven by a love for learning and building cool things.
-            I enjoy turning ideas into reality through code and continuously
-            exploring the vast possibilities that technology offers.
-          </motion.p>
-
-          {/* Social Links */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.8, duration: 0.6 }}
-            className="pt-4 w-full"
-          >
-            <SocialLinks />
-          </motion.div>
-
-          {/* CTA Buttons */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 1, duration: 0.6 }}
-            className="flex flex-wrap gap-4 justify-center lg:justify-start pt-4"
-          >
-            <a
-              href="#projects"
-              className="px-6 py-2 xs:px-8 xs:py-3 bg-blue-950 text-white rounded-full font-marcellus font-semibold shadow-lg hover:shadow-2xl hover:shadow-blue-950/50 transform hover:scale-105 transition-all duration-300 text-sm xs:text-base"
-              aria-label="Navigate to projects section"
-            >
-              View My Projects
-            </a>
-          </motion.div>
-        </motion.div>
-
-        {/* Right Side - Animated Image/GIF */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
+          initial={reduce ? { opacity: 0 } : { opacity: 0, scale: 1.04 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ delay: 0.3, duration: 0.8, type: "spring" }}
-          className="relative mt-8 lg:mt-0 w-full flex justify-center lg:justify-end lg:w-2/5"
+          transition={{ delay: 0.2, duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
+          className="group relative order-2 aspect-[4/5] w-full overflow-hidden bg-surface-2 md:order-1 md:aspect-auto md:h-full"
         >
-          <div className="relative w-40 h-40 xs:w-56 xs:h-56 sm:w-64 sm:h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 mx-auto">
-            <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-gray-800 shadow-2xl">
-              <img
-                src={meImage}
-                alt="Laxmi Lamichhane"
-                className="w-full h-full object-cover"
-              />
-            </div>
-
-            <motion.div
-              animate={{ y: [0, -10, 0] }}
-              transition={{ duration: 3, repeat: Infinity }}
-              className="absolute -top-3 -right-3 xs:-top-4 xs:-right-4 bg-gray-600 rounded-full p-2 xs:p-3 shadow-lg"
-            >
-              <span className="text-xl xs:text-2xl">🇳🇵</span>
-            </motion.div>
-            <motion.div
-              animate={{ y: [0, -10, 0] }}
-              transition={{ duration: 3, repeat: Infinity, delay: 1 }}
-              className="absolute -bottom-3 -left-3 xs:-bottom-4 xs:-left-4 bg-gray-600 rounded-full p-2 xs:p-3 shadow-lg"
-            >
-              <span className="text-xl xs:text-2xl">🚀</span>
-            </motion.div>
+          <img
+            src={meImage}
+            alt="Laxmi Lamichhane"
+            width={800}
+            height={1000}
+            className="absolute inset-0 h-full w-full object-cover grayscale transition-[filter] duration-700 group-hover:grayscale-0"
+          />
+          <div className="absolute inset-x-0 bottom-0 flex items-center justify-between gap-3 bg-body/90 px-4 py-3 md:px-6">
+            <span className="font-mono text-step--1 uppercase tracking-[0.18em] text-surface">
+              Fig. 01 — the author
+            </span>
+            <span className="font-mono text-step--1 uppercase tracking-[0.18em] text-surface">
+              Pokhara, Nepal
+            </span>
           </div>
         </motion.div>
+
+        <div className="order-1 flex flex-col justify-center gap-8 px-gutter pb-16 pt-28 md:order-2 md:px-12 md:py-0 lg:px-16">
+          <motion.div
+            initial={reduce ? { opacity: 0 } : { opacity: 0, y: 8 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.1, duration: 0.5 }}
+            className="flex items-center gap-3"
+          >
+            <span aria-hidden className="h-px w-8 bg-accent" />
+            <span className="font-mono text-step--1 uppercase tracking-[0.18em] text-accent-text">
+              Software Engineer
+            </span>
+          </motion.div>
+
+          <RevealText
+            as="h1"
+            lines={["Laxmi", "Lamichhane"]}
+            delay={0.2}
+            className="font-display text-display font-extrabold leading-[0.85] tracking-[-0.03em] text-body"
+          />
+
+          <motion.p
+            initial={reduce ? { opacity: 0 } : { opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.6, duration: 0.6 }}
+            className="measure text-step-1 text-muted"
+          >
+            I build interfaces that feel considered — fast, accessible, and
+            thought through down to the last hairline.
+          </motion.p>
+
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.8, duration: 0.6 }}
+            className="flex flex-wrap items-center gap-4"
+          >
+            <Link
+              to="work"
+              smooth={!reduce}
+              duration={reduce ? 0 : 600}
+              offset={-72}
+              className="group inline-flex min-h-[44px] cursor-pointer items-center gap-3 bg-body px-6 py-3 font-mono text-step--1 uppercase tracking-[0.18em] text-surface transition-opacity hover:opacity-80"
+            >
+              See the work
+              <ArrowDown
+                size={14}
+                className="transition-transform duration-300 group-hover:translate-y-1"
+                aria-hidden
+              />
+            </Link>
+
+            <p className="inline-flex items-center gap-2 border-2 border-accent px-3 py-2 font-mono text-step--1 uppercase tracking-[0.18em] text-accent-text">
+              <span aria-hidden className="h-1.5 w-1.5 bg-accent" />
+              Available for work
+            </p>
+          </motion.div>
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 
