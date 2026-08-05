@@ -3,52 +3,37 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      // RGB values support opacity modifiers and change with the active surface.
       colors: {
-        primary: "#EEEDEB",
-        secondary: "#A9A9A9",
-        tertiary: "#030637",
-        accent: "#FF6B6B",
-        accent2: "#4ECDC4",
-        accent3: "#FFE66D",
-        dark: "#1A1A2E",
-        dark2: "#16213E",
-      },
-      textColor: {
-        pri: "#102C57",
-        sec: "#222831",
-        tert: "#F7EFE5",
+        surface: "rgb(var(--surface-rgb) / <alpha-value>)",
+        "surface-2": "rgb(var(--surface-2-rgb) / <alpha-value>)",
+        rule: "rgb(var(--rule-rgb) / <alpha-value>)",
+        body: "rgb(var(--body-rgb) / <alpha-value>)",
+        muted: "rgb(var(--muted-rgb) / <alpha-value>)",
+        "accent-text": "rgb(var(--accent-text-rgb) / <alpha-value>)",
+        accent: "rgb(var(--accent-rgb) / <alpha-value>)",
       },
       fontFamily: {
-        pixel: ["Pixelify Sans", "sans-serif"],
-        marcellus: ["Marcellus", "serif"],
+        display: ['"Bricolage Grotesque"', "system-ui", "sans-serif"],
+        mono: ['"JetBrains Mono"', "ui-monospace", "monospace"],
       },
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      fontSize: {
+        "step--1": "var(--step--1)",
+        "step-0": "var(--step-0)",
+        "step-1": "var(--step-1)",
+        "step-2": "var(--step-2)",
+        "step-3": "var(--step-3)",
+        "step-4": "var(--step-4)",
+        display: "var(--display)",
       },
-      animation: {
-        'float': 'float 6s ease-in-out infinite',
-        'glow': 'glow 2s ease-in-out infinite alternate',
-        'slide-up': 'slideUp 0.5s ease-out',
-        'fade-in': 'fadeIn 0.6s ease-out',
+      borderColor: {
+        DEFAULT: "rgb(var(--rule-rgb) / <alpha-value>)",
       },
-      keyframes: {
-        float: {
-          '0%, 100%': { transform: 'translateY(0px)' },
-          '50%': { transform: 'translateY(-20px)' },
-        },
-        glow: {
-          '0%': { boxShadow: '0 0 5px rgba(255, 107, 107, 0.5)' },
-          '100%': { boxShadow: '0 0 20px rgba(255, 107, 107, 0.8)' },
-        },
-        slideUp: {
-          '0%': { opacity: '0', transform: 'translateY(30px)' },
-          '100%': { opacity: '1', transform: 'translateY(0)' },
-        },
-        fadeIn: {
-          '0%': { opacity: '0' },
-          '100%': { opacity: '1' },
-        },
+      maxWidth: {
+        shell: "1400px",
+      },
+      spacing: {
+        gutter: "var(--gutter)",
       },
     },
   },

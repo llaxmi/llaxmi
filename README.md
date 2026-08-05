@@ -7,7 +7,7 @@
 
 👨‍💻 All of my projects are available at [https://www.laxmilamichhane.com.np](https://www.laxmilamichhane.com.np)
 
-📫 How to reach me **ll4xmi@gmail.com**
+📫 How to reach me **llaxmii.dev@gmail.com**
 
 <h3 align="left">Connect with me:</h3>
 <p align="left">
