@@ -1,5 +1,4 @@
 import { ArrowUpRight } from "lucide-react";
-import { useState } from "react";
 import type { Project } from "../constants/data";
 import SketchFrame from "./SketchFrame";
 
@@ -7,7 +6,8 @@ interface ProjectCardProps {
   project: Project;
   // Playground cards do not show an index.
   index?: number;
-  // The card switches to the opposite surface when active.
+  // Which surface the card sits on. It does not change on hover: the text stays
+  // legible against the card's own background throughout.
   surface?: "paper" | "ink";
 }
 
@@ -16,9 +16,6 @@ const ProjectCard = ({
   index,
   surface = "paper",
 }: ProjectCardProps) => {
-  const [active, setActive] = useState(false);
-  const hoverSurface = surface === "ink" ? "paper" : "ink";
-
   const tags = project.technologies
     .split(",")
     .map((t) => t.trim())
@@ -31,12 +28,8 @@ const ProjectCard = ({
         href={project.githubLink}
         target="_blank"
         rel="noopener noreferrer"
-        data-surface={active ? hoverSurface : surface}
-        onMouseEnter={() => setActive(true)}
-        onMouseLeave={() => setActive(false)}
-        onFocus={() => setActive(true)}
-        onBlur={() => setActive(false)}
-        className="group flex h-full flex-col gap-4 bg-white p-4 transition-colors duration-300 sm:p-5"
+        data-surface={surface}
+        className="group flex h-full flex-col gap-4 bg-white p-4 sm:p-5"
       >
         <div className="overflow-hidden border border-rule">
           <img
