@@ -1,8 +1,8 @@
 import p2 from "../assets/bmi.png";
-import p5 from "../assets/cine.png";
 import p6 from "../assets/gena.png";
 import p3 from "../assets/ideapulse.png";
 import p1 from "../assets/summarizer.png";
+import p0 from "../assets/tosrag.png";
 import p4 from "../assets/wander.png";
 
 import a1 from "../assets/aircanvas.png";
@@ -46,14 +46,25 @@ export interface Achievement {
 
 export const navigation: NavigationItem[] = [
   { title: "About", target: "about" },
+  { title: "Skills", target: "skills" },
   { title: "Work", target: "work" },
   { title: "Playground", target: "playground" },
-  { title: "Skills", target: "skills" },
   { title: "Achievements", target: "achievements" },
   { title: "Contact", target: "contact" },
 ];
 
 export const projects: Project[] = [
+  {
+    title: "ToS RAG",
+    tagline: "Ask a Terms of Service what it actually says.",
+    description:
+      "My final year project: a controlled study of how retrieval design changes the answers you get from legal documents. It sweeps 15 chunking configurations, then compares Llama 3.1 8B against Claude Opus on the winner \u2014 and ships the pipeline as a demo where every claim cites the clause it came from.",
+    technologies:
+      "TypeScript, Python, Hono, Postgres, pgvector, Ollama, Claude API",
+    githubLink: "https://github.com/llaxmi/tos-rag",
+    date: "Aug 2026",
+    image: p0,
+  },
   {
     title: "GENA",
     tagline: "Turns your study notes into quizzes.",
@@ -103,16 +114,6 @@ export const projects: Project[] = [
     githubLink: "https://github.com/llaxmi/wander-pokhara.git",
     date: "Aug 2024",
     image: p4,
-  },
-  {
-    title: "Cinemate",
-    tagline: "Search films, keep a watchlist.",
-    description:
-      "Cinemate is a movie site backed by the TMDB API. Users can search for movies, add them to a watchlist, or mark them as watched.",
-    technologies: "React, Tailwind CSS, JavaScript",
-    githubLink: "https://github.com/llaxmi/MovieApp.git",
-    date: "Jan 2024",
-    image: p5,
   },
 ];
 

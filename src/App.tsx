@@ -17,9 +17,9 @@ const App = () => (
       <main>
         <Home />
         <About />
+        <Skills />
         <Work />
         <Playground />
-        <Skills />
         <Achievements />
         <Contact />
       </main>

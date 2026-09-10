@@ -35,7 +35,7 @@ const About = () => (
           {[
             { label: "Role", value: "Full-stack Engineer" },
             { label: "Current", value: "SyncGTM · Next.js / NestJS / TS" },
-            { label: "Education", value: "B.E. Software Eng., GCES" },
+            { label: "Education", value: "B.E. Software Eng., GCES · 2026" },
           ].map(({ label, value }) => (
             <div
               key={label}

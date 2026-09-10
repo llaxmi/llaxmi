@@ -7,12 +7,12 @@ export const Playground = () => (
     <div className="mx-auto max-w-shell px-gutter">
       <SectionHeader
         id="playground-heading"
-        index="04"
+        index="05"
         title="Playground"
         description="Things built for no good reason."
       />
 
-      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="grid grid-cols-1 gap-x-8 gap-y-12 md:grid-cols-2 xl:grid-cols-3">
         {funProjects.map((project) => (
           <ProjectCard key={project.title} project={project} />
         ))}

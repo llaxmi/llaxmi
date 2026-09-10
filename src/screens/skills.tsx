@@ -14,7 +14,7 @@ const Skills = () => (
     <div className="mx-auto max-w-shell px-gutter">
       <SectionHeader
         id="skills-heading"
-        index="05"
+        index="03"
         title="Skills"
         description="What I reach for, and what I'm still learning."
       />
