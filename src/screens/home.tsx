@@ -5,13 +5,12 @@ import meImage from "../assets/me.jpeg";
 import RevealText from "../components/primitives/RevealText";
 import SketchFrame from "../components/SketchFrame";
 
-// The skyline north of Pokhara, with Machhapuchhre's twin summit near the
-// right. Drawn once in a 1200×120 box and stretched to the page width.
+// The skyline north of Pokhara. Drawn once in a 1200×120 box and stretched to the page width.
 const RIDGE =
   "M0 110 L60 98 L120 104 L190 86 L250 94 L320 72 L380 82 L450 60 L510 70 L580 48 L640 58 L700 34 L745 46 L790 6 L812 24 L828 10 L870 52 L920 44 L980 66 L1040 58 L1100 80 L1150 74 L1200 90";
 
 const Ridge = () => (
-  <div className="relative text-body" aria-hidden>
+  <div className="text-body" aria-hidden>
     <svg
       viewBox="0 0 1200 120"
       preserveAspectRatio="none"
@@ -27,9 +26,6 @@ const Ridge = () => (
         vectorEffect="non-scaling-stroke"
       />
     </svg>
-    <span className="absolute left-[67%] top-[-1.6rem] hidden -rotate-6 font-hand text-step-0 text-muted sm:block">
-      Machhapuchhre
-    </span>
   </div>
 );
 
@@ -61,9 +57,7 @@ const Home = () => {
             transition={{ delay: 0.6, duration: 0.6 }}
             className="relative mt-8 max-w-[34ch] text-step-1 leading-snug text-muted"
           >
-            Full-stack engineer in Pokhara, Nepal. I build interfaces that feel
-            considered: fast, accessible, and thought through to the last
-            hairline.
+            I&apos;m a full-stack engineer from Pokhara, Nepal.
           </motion.p>
 
           <motion.div
