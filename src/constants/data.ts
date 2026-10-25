@@ -38,6 +38,10 @@ export interface Project {
 export interface SkillGroup {
   label: string;
   items: string[];
+  // Projects where the group was put to work, shown as evidence beside it.
+  usedIn: string[];
+  // Still being learned: set in handwriting rather than bold display type.
+  learning?: boolean;
 }
 
 export interface Achievement {
@@ -125,12 +129,42 @@ export const projects: Project[] = [
 ];
 
 export const skillGroups: SkillGroup[] = [
-  { label: "Languages", items: ["TypeScript", "JavaScript", "C", "C++"] },
-  { label: "Frameworks", items: ["React", "Next.js", "React Native", "Node.js", "Express"] },
-  { label: "Styling", items: ["Tailwind CSS", "CSS"] },
-  { label: "Data", items: ["PostgreSQL", "MongoDB", "Prisma", "TanStack Query"] },
-  { label: "Tools", items: ["Git", "Vite", "Storybook", "Docker"] },
-  { label: "Exploring", items: ["LangChain", "Ollama", "MediaPipe", "Three.js / R3F"] },
+  {
+    label: "Interfaces",
+    items: ["TypeScript", "React", "Next.js", "React Native", "Tailwind CSS", "TanStack Query"],
+    usedIn: ["GENA", "Summarizer", "BMI"],
+  },
+  {
+    label: "Servers",
+    items: ["Node.js", "NestJS", "Express", "Hono", "Python"],
+    usedIn: ["ToS RAG", "Wander Pokhara", "SyncGTM"],
+  },
+  {
+    label: "Data",
+    items: ["PostgreSQL", "pgvector", "Prisma", "MongoDB"],
+    usedIn: ["ToS RAG", "GENA"],
+  },
+  {
+    label: "Language models",
+    items: ["Claude API", "OpenAI", "LangChain", "Ollama", "RAG"],
+    usedIn: ["ToS RAG", "IdeaPulse", "Summarizer"],
+  },
+  {
+    label: "Tooling",
+    items: ["Git", "Docker", "Vite", "Storybook"],
+    usedIn: ["GENA", "IdeaPulse"],
+  },
+  {
+    label: "Foundations",
+    items: ["JavaScript", "C", "C++"],
+    usedIn: ["Coursework at GCES"],
+  },
+  {
+    label: "Exploring",
+    items: ["MediaPipe", "Three.js / R3F", "Framer Motion"],
+    usedIn: ["Air Canvas", "Valentine's Card"],
+    learning: true,
+  },
 ];
 
 export const funProjects: Project[] = [
