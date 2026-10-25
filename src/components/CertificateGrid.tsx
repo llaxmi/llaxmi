@@ -2,7 +2,7 @@ import { useRef, useState } from "react";
 import type { Achievement } from "../constants/data";
 import { achievements } from "../constants/data";
 import Lightbox from "./Lightbox";
-import MonoLabel from "./primitives/MonoLabel";
+import Caption from "./primitives/Caption";
 
 const CertificateGrid = () => {
   const [active, setActive] = useState<Achievement | null>(null);
@@ -37,12 +37,12 @@ const CertificateGrid = () => {
                 />
               </div>
 
-              <h3 className="mt-4 font-display text-step-1 font-bold uppercase leading-tight text-body">
+              <h3 className="mt-4 font-display text-step-1 font-bold leading-tight tracking-[-0.01em] text-body">
                 {item.title}
               </h3>
-              <MonoLabel as="p" className="mt-2 block">
-                {item.issuer} — {item.date}
-              </MonoLabel>
+              <Caption as="p" className="mt-2 block">
+                {item.issuer}, {item.date}
+              </Caption>
             </button>
           </li>
         ))}

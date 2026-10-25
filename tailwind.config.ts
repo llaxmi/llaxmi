@@ -12,10 +12,18 @@ export default {
         muted: "rgb(var(--muted-rgb) / <alpha-value>)",
         "accent-text": "rgb(var(--accent-text-rgb) / <alpha-value>)",
         accent: "rgb(var(--accent-rgb) / <alpha-value>)",
+        flag: {
+          blue: "rgb(var(--flag-blue-rgb) / <alpha-value>)",
+          white: "rgb(var(--flag-white-rgb) / <alpha-value>)",
+          red: "rgb(var(--flag-red-rgb) / <alpha-value>)",
+          green: "rgb(var(--flag-green-rgb) / <alpha-value>)",
+          yellow: "rgb(var(--flag-yellow-rgb) / <alpha-value>)",
+        },
       },
       fontFamily: {
         display: ['"Bricolage Grotesque"', "system-ui", "sans-serif"],
-        mono: ['"JetBrains Mono"', "ui-monospace", "monospace"],
+        hand: ["Caveat", "cursive"],
+        deva: ['"Tiro Devanagari Hindi"', "serif"],
       },
       fontSize: {
         "step--1": "var(--step--1)",
@@ -24,6 +32,7 @@ export default {
         "step-2": "var(--step-2)",
         "step-3": "var(--step-3)",
         "step-4": "var(--step-4)",
+        "step-5": "var(--step-5)",
         display: "var(--display)",
       },
       borderColor: {

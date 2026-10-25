@@ -3,6 +3,7 @@ import { X } from "lucide-react";
 import { useEffect, useRef } from "react";
 import { Link } from "react-scroll";
 import { navigation } from "../constants/data";
+import Flag from "./primitives/Flag";
 import ResumeButton from "./ResumeButton";
 
 interface NavOverlayProps {
@@ -90,8 +91,8 @@ const NavOverlay = ({ open, onClose }: NavOverlayProps) => {
           className="fixed inset-0 z-[60] flex flex-col bg-surface px-gutter py-6 md:hidden"
         >
           <div className="flex items-center justify-between">
-            <span className="font-mono text-step--1 uppercase tracking-[0.18em] text-muted">
-              Menu
+            <span className="font-display text-step-1 font-extrabold tracking-[-0.03em] text-body [font-stretch:80%]">
+              laxmi<span className="text-accent">.</span>
             </span>
             <button
               type="button"
@@ -117,10 +118,11 @@ const NavOverlay = ({ open, onClose }: NavOverlayProps) => {
                   href={`#${item.target}`}
                   smooth={!reduce}
                   duration={reduce ? 0 : 500}
-                  offset={-72}
+                  offset={-84}
                   onClick={onClose}
-                  className="block cursor-pointer py-3 font-display text-step-4 leading-none text-body"
+                  className="flex cursor-pointer items-center gap-4 py-3 font-display text-step-4 font-extrabold leading-none tracking-[-0.03em] text-body [font-stretch:80%]"
                 >
+                  <Flag color={item.flag} className="h-8 w-6" />
                   {item.title}
                 </Link>
               </motion.div>

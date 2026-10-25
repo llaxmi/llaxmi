@@ -2,7 +2,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { X } from "lucide-react";
 import { useEffect, useRef } from "react";
 import type { Achievement } from "../constants/data";
-import MonoLabel from "./primitives/MonoLabel";
+import Caption from "./primitives/Caption";
 
 interface LightboxProps {
   item: Achievement | null;
@@ -84,12 +84,12 @@ const Lightbox = ({ item, onClose }: LightboxProps) => {
               className="w-full object-contain"
             />
             <div className="border-t border-rule p-6">
-              <h3 className="font-display text-step-2 font-bold uppercase leading-none text-body">
+              <h3 className="font-display text-step-2 font-extrabold leading-none tracking-[-0.02em] [font-stretch:85%] text-body">
                 {item.title}
               </h3>
-              <MonoLabel as="p" className="mt-3 block">
-                {item.issuer} — {item.date}
-              </MonoLabel>
+              <Caption as="p" className="mt-3 block">
+                {item.issuer}, {item.date}
+              </Caption>
               <p className="measure mt-4 text-step-0 text-muted">
                 {item.description}
               </p>

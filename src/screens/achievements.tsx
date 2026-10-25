@@ -6,7 +6,7 @@ export const Achievements = () => (
     <div className="mx-auto max-w-shell px-gutter">
       <SectionHeader
         id="achievements-heading"
-        index="06"
+        section="achievements"
         title="Achievements"
         description="Competitions, mentoring, and certificates."
       />

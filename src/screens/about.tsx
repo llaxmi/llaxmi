@@ -4,11 +4,11 @@ const About = () => (
   <section id="about" aria-labelledby="about-heading" className="border-b border-rule py-20 md:py-28">
     <div className="mx-auto grid max-w-shell grid-cols-4 gap-x-4 gap-y-8 px-gutter md:grid-cols-12">
       <div className="col-span-4 md:col-span-12">
-        <SectionHeader id="about-heading" index="02" title="About" />
+        <SectionHeader id="about-heading" section="about" title="About" />
       </div>
 
       <div className="col-span-4 md:col-span-7">
-        <p className="measure text-step-1 text-body">
+        <p className="measure text-step-2 leading-snug text-body">
           I&apos;m a full stack developer based in Pokhara, Nepal. Most of what I
           enjoy is the boring-sounding stuff done right: a data layer that
           doesn&apos;t fall over, a form that doesn&apos;t fight the user.
@@ -27,24 +27,24 @@ const About = () => (
       </div>
 
       <aside className="col-span-4 md:col-span-4 md:col-start-9">
-        <blockquote className="border-l-2 border-accent pl-6 font-display text-step-2 leading-snug text-body">
+        <blockquote className="-rotate-2 font-hand text-step-4 leading-[1.05] text-flag-blue">
           I care about the parts people don&apos;t notice.
         </blockquote>
 
-        <dl className="mt-10 border-t border-rule">
+        <dl className="mt-12 border-t border-rule">
           {[
             { label: "Role", value: "Full-stack Engineer" },
-            { label: "Current", value: "SyncGTM · Next.js / NestJS / TS" },
-            { label: "Education", value: "B.E. Software Eng., GCES · 2026" },
+            { label: "Current", value: "SyncGTM, on Next.js and NestJS" },
+            { label: "Education", value: "B.E. Software Engineering, GCES, 2026" },
           ].map(({ label, value }) => (
             <div
               key={label}
               className="flex items-baseline justify-between gap-4 border-b border-rule py-3"
             >
-              <dt className="font-mono text-step--1 uppercase tracking-[0.18em] text-muted">
+              <dt className="text-step--1 text-muted">
                 {label}
               </dt>
-              <dd className="text-right font-mono text-step--1 text-body">
+              <dd className="text-right text-step--1 font-semibold text-body">
                 {value}
               </dd>
             </div>

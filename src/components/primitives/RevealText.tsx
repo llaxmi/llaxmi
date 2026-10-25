@@ -18,7 +18,8 @@ const RevealText = ({
   return (
     <Tag className={className}>
       {lines.map((line, i) => (
-        <span key={line} className="block overflow-hidden">
+        // The padding keeps descenders from being clipped at tight line heights.
+        <span key={line} className="-mb-[0.12em] block overflow-hidden pb-[0.12em]">
           <motion.span
             className="block"
             initial={reduce ? { opacity: 0 } : { y: "100%" }}

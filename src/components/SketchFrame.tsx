@@ -71,10 +71,11 @@ const clip = {
 interface SketchFrameProps {
   children: React.ReactNode;
   className?: string;
+  style?: React.CSSProperties;
 }
 
-const SketchFrame = ({ children, className = "" }: SketchFrameProps) => (
-  <div className={`relative ${className}`}>
+const SketchFrame = ({ children, className = "", style }: SketchFrameProps) => (
+  <div className={`relative ${className}`} style={style}>
     <Edge
       viewBox="0 0 600 16"
       d="M3 8.6 C 120 6.4, 240 10.2, 360 7.4 S 520 9.6, 597 8"

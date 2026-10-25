@@ -16,9 +16,13 @@ import ideathon from "../assets/achievements/ideathon.jpg";
 import mentor from "../assets/achievements/mentor.png";
 import sisu from "../assets/achievements/sisu.jpeg";
 
+// The five prayer-flag colors, in their traditional order.
+export type FlagColor = "blue" | "white" | "red" | "green" | "yellow";
+
 export interface NavigationItem {
   title: string;
   target: string;
+  flag: FlagColor;
 }
 
 export interface Project {
@@ -45,13 +49,16 @@ export interface Achievement {
 }
 
 export const navigation: NavigationItem[] = [
-  { title: "About", target: "about" },
-  { title: "Skills", target: "skills" },
-  { title: "Work", target: "work" },
-  { title: "Playground", target: "playground" },
-  { title: "Achievements", target: "achievements" },
-  { title: "Contact", target: "contact" },
+  { title: "About", target: "about", flag: "blue" },
+  { title: "Skills", target: "skills", flag: "white" },
+  { title: "Work", target: "work", flag: "red" },
+  { title: "Playground", target: "playground", flag: "green" },
+  { title: "Achievements", target: "achievements", flag: "yellow" },
+  { title: "Contact", target: "contact", flag: "blue" },
 ];
+
+export const flagFor = (target: string): FlagColor =>
+  navigation.find((item) => item.target === target)?.flag ?? "blue";
 
 export const projects: Project[] = [
   {

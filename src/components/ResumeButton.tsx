@@ -6,11 +6,11 @@ interface ResumeButtonProps {
   className?: string;
 }
 
-const ResumeButton = ({ label = "CV", className = "" }: ResumeButtonProps) => (
+const ResumeButton = ({ label = "Download CV", className = "" }: ResumeButtonProps) => (
   <a
     href={CV}
     download="LaxmiLamichhane_CV"
-    className={`inline-flex min-h-[44px] items-center gap-2 border border-body px-4 font-mono text-step--1 uppercase tracking-[0.18em] text-body transition-colors duration-200 hover:bg-body hover:text-surface ${className}`}
+    className={`inline-flex min-h-[44px] items-center gap-2 rounded-full border-[1.5px] border-body px-4 text-step--1 font-semibold text-body transition-colors duration-200 hover:bg-body hover:text-surface ${className}`}
   >
     <Download size={14} aria-hidden />
     {label}
