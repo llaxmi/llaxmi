@@ -33,6 +33,8 @@ export interface Project {
   githubLink: string;
   date: string;
   image: string;
+  // A working version shown in place of the screenshot.
+  demo?: "palette";
 }
 
 export interface SkillGroup {
@@ -177,6 +179,7 @@ export const funProjects: Project[] = [
     githubLink: "https://github.com/llaxmi/palette-picker",
     date: "Mar 2026",
     image: pa,
+    demo: "palette",
   },
   {
     title: "Air Canvas",

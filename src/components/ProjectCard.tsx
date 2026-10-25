@@ -1,5 +1,6 @@
 import { ArrowUpRight } from "lucide-react";
 import type { Project } from "../constants/data";
+import PaletteDemo from "./PaletteDemo";
 import SketchFrame from "./SketchFrame";
 
 interface ProjectCardProps {
@@ -29,25 +30,30 @@ const ProjectCard = ({ project, variant = "pinned", tilt = 0 }: ProjectCardProps
       className="h-full text-body transition-[rotate] duration-300 ease-out [rotate:var(--tilt)] focus-within:[rotate:0deg] hover:[rotate:0deg]"
       style={{ ["--tilt" as string]: `${tilt}deg` }}
     >
-      <a
-        href={project.githubLink}
-        target="_blank"
-        rel="noopener noreferrer"
+      {/* The title link stretches over the whole card, and a live demo sits
+          above it so its own controls stay clickable. */}
+      <div
         data-surface="paper"
-        className={`group flex h-full flex-col gap-4 bg-white p-4 sm:p-5 ${
+        className={`group relative flex h-full flex-col gap-4 bg-white p-4 sm:p-5 ${
           featured ? "lg:grid lg:grid-cols-12 lg:gap-8 lg:p-6" : ""
         }`}
       >
-        <div className={`overflow-hidden border border-rule ${featured ? "lg:col-span-7" : ""}`}>
-          <img
-            src={project.image}
-            alt={`${project.title} screenshot`}
-            loading="lazy"
-            width={1600}
-            height={1000}
-            className={`w-full object-cover object-top ${polaroid ? "aspect-square" : "aspect-[16/10]"}`}
-          />
-        </div>
+        {project.demo === "palette" ? (
+          <div className="relative z-10">
+            <PaletteDemo initialImage={project.image} />
+          </div>
+        ) : (
+          <div className={`overflow-hidden border border-rule ${featured ? "lg:col-span-7" : ""}`}>
+            <img
+              src={project.image}
+              alt={`${project.title} screenshot`}
+              loading="lazy"
+              width={1600}
+              height={1000}
+              className={`w-full object-cover object-top ${polaroid ? "aspect-square" : "aspect-[16/10]"}`}
+            />
+          </div>
+        )}
 
         <div className={`flex flex-1 flex-col gap-3 ${featured ? "lg:col-span-5 lg:py-2" : ""}`}>
           {polaroid && (
@@ -62,7 +68,14 @@ const ProjectCard = ({ project, variant = "pinned", tilt = 0 }: ProjectCardProps
                 featured ? "text-step-4" : polaroid ? "text-step-1" : "text-step-2"
               }`}
             >
-              {project.title}
+              <a
+                href={project.githubLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="after:absolute after:inset-0 after:content-[''] focus-visible:outline-none focus-visible:after:outline focus-visible:after:outline-2 focus-visible:after:outline-offset-4 focus-visible:after:outline-flag-blue"
+              >
+                {project.title}
+              </a>
             </h3>
 
             <span
@@ -88,7 +101,7 @@ const ProjectCard = ({ project, variant = "pinned", tilt = 0 }: ProjectCardProps
             </span>
           </p>
         </div>
-      </a>
+      </div>
     </SketchFrame>
   );
 };
