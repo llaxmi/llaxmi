@@ -20,6 +20,9 @@ const TILTS = [-3, 2, -1.5, 2.5, -2, 1.5];
 const Nav = () => {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  // The flag under the pointer. It and its neighbours flutter, as if a gust
+  // caught that part of the string.
+  const [gust, setGust] = useState<number | null>(null);
   const triggerRef = useRef<HTMLButtonElement>(null);
   const reduce = useReducedMotion();
 
@@ -72,11 +75,18 @@ const Nav = () => {
 
               {navigation.map((item, i) => {
                 const t = (i + 0.5) / navigation.length;
+                const distance = gust === null ? Infinity : Math.abs(i - gust);
                 return (
                   <span
                     key={item.target}
-                    className="relative"
-                    style={{ marginTop: stringY(t) - 3 }}
+                    onMouseEnter={() => setGust(i)}
+                    onMouseLeave={() => setGust(null)}
+                    className={`relative ${distance <= 1 ? "animate-flutter" : ""}`}
+                    style={{
+                      marginTop: stringY(t) - 3,
+                      ["--gust" as string]: distance === 0 ? 1 : 0.45,
+                      ["--gust-delay" as string]: `${distance * 90}ms`,
+                    }}
                   >
                     <Link
                       to={item.target}

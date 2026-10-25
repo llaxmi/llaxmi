@@ -79,4 +79,38 @@
   .animate-marquee {
     animation: marquee var(--duration, 40s) linear infinite;
   }
+
+  /* A gust of wind: the cloth swings from its top edge and settles. --gust
+     scales the swing, so flags further from the gust move less. */
+  @keyframes flutter {
+    0%,
+    100% {
+      transform: none;
+    }
+    18% {
+      transform: skewX(calc(var(--gust, 1) * -7deg)) scaleY(calc(1 - var(--gust, 1) * 0.05));
+    }
+    38% {
+      transform: skewX(calc(var(--gust, 1) * 5deg)) scaleY(calc(1 - var(--gust, 1) * 0.02));
+    }
+    58% {
+      transform: skewX(calc(var(--gust, 1) * -3deg));
+    }
+    78% {
+      transform: skewX(calc(var(--gust, 1) * 1.5deg));
+    }
+  }
+
+  .animate-flutter {
+    transform-origin: top center;
+    animation: flutter 0.9s ease-out var(--gust-delay, 0s) both;
+  }
+
+  .hover-flutter {
+    transform-origin: top center;
+  }
+  .hover-flutter:hover,
+  .group:hover .hover-flutter {
+    animation: flutter 0.9s ease-out both;
+  }
 }
