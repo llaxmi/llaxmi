@@ -21,8 +21,10 @@ export default {
         },
       },
       fontFamily: {
+        // Display type for headings; a hyperlegible face for everything you read.
+        sans: ['"Atkinson Hyperlegible Next"', "system-ui", "sans-serif"],
         display: ['"Bricolage Grotesque"', "system-ui", "sans-serif"],
-        hand: ["Caveat", "cursive"],
+        hand: ["Kalam", "cursive"],
         deva: ['"Tiro Devanagari Hindi"', "serif"],
       },
       fontSize: {

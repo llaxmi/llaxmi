@@ -20,9 +20,9 @@
     color: var(--body);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    font-family: "Bricolage Grotesque", system-ui, sans-serif;
+    font-family: "Atkinson Hyperlegible Next", system-ui, sans-serif;
     font-size: var(--step-0);
-    line-height: 1.6;
+    line-height: 1.65;
   }
 
   ::selection {

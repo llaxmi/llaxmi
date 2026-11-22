@@ -6,6 +6,7 @@ import { Achievements } from "./screens/achievements";
 import Contact from "./screens/contact";
 import Home from "./screens/home";
 import { Playground } from "./screens/playground";
+import Research from "./screens/research";
 import Skills from "./screens/skills";
 import Work from "./screens/work";
 
@@ -17,8 +18,9 @@ const App = () => (
       <main>
         <Home />
         <About />
-        <Skills />
+        <Research />
         <Work />
+        <Skills />
         <Playground />
         <Achievements />
         <Contact />
