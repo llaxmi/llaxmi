@@ -1,9 +1,9 @@
 import { motion, useReducedMotion } from "framer-motion";
 import { ArrowDown } from "lucide-react";
 import { Link } from "react-scroll";
-import meImage from "../assets/me.jpeg";
 import RevealText from "../components/primitives/RevealText";
-import SketchFrame from "../components/SketchFrame";
+import ResumeButton from "../components/ResumeButton";
+import PortraitStack from "../components/PortraitStack";
 
 // The skyline north of Pokhara. Drawn once in a 1200×120 box and stretched to the page width.
 const RIDGE =
@@ -55,9 +55,11 @@ const Home = () => {
             initial={reduce ? { opacity: 0 } : { opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6, duration: 0.6 }}
-            className="relative mt-8 max-w-[34ch] text-step-1 leading-snug text-muted"
+            className="relative mt-8 max-w-[40ch] text-step-1 leading-snug text-muted"
           >
-            I&apos;m a full-stack engineer from Pokhara, Nepal.
+            I&apos;m a software engineering graduate from Pokhara, Nepal, interested
+            in how we evaluate language-model systems, and how sure we can really be
+            about the results.
           </motion.p>
 
           <motion.div
@@ -67,14 +69,14 @@ const Home = () => {
             className="relative mt-8 flex flex-wrap items-center gap-x-6 gap-y-4"
           >
             <Link
-              to="work"
-              href="#work"
+              to="research"
+              href="#research"
               smooth={!reduce}
               duration={reduce ? 0 : 600}
               offset={-84}
               className="group inline-flex min-h-[48px] cursor-pointer items-center gap-3 rounded-full bg-body px-6 py-3 text-step-0 font-semibold text-surface transition-colors hover:bg-flag-blue"
             >
-              See my work
+              See my research
               <ArrowDown
                 size={16}
                 className="transition-transform duration-300 group-hover:translate-y-0.5"
@@ -82,48 +84,20 @@ const Home = () => {
               />
             </Link>
 
-            <p className="inline-flex items-center gap-2 text-step-0 font-medium text-body">
-              <span aria-hidden className="relative flex h-2.5 w-2.5">
-                <span className="absolute inset-0 animate-ping rounded-full bg-flag-green/60 motion-reduce:hidden" />
-                <span className="relative h-2.5 w-2.5 rounded-full bg-flag-green" />
-              </span>
-              Available for work
-            </p>
+            <ResumeButton align="left" className="min-h-[48px] px-5" />
+
+           
           </motion.div>
         </div>
 
-        <div className="relative mx-auto w-[85%] max-w-[20rem] md:col-span-5 md:w-full md:mr-0 md:max-w-[24rem]">
+        <div className="relative mx-auto mb-16 w-[62%] max-w-[14rem] pr-6 md:col-span-5 md:mb-0 md:mr-8 md:w-full md:max-w-[17rem] lg:mr-16">
           <motion.div
             initial={reduce ? { opacity: 0 } : { opacity: 0, y: -40, rotate: -8 }}
-            animate={{ opacity: 1, y: 0, rotate: 2.5 }}
+            animate={{ opacity: 1, y: 0, rotate: 1.5 }}
             transition={{ delay: 0.35, type: "spring", stiffness: 90, damping: 12 }}
           >
-            <SketchFrame className="text-body">
-              <div className="bg-white p-3">
-                <img
-                  src={meImage}
-                  alt="Laxmi Lamichhane"
-                  width={800}
-                  height={1000}
-                  className="aspect-[4/5] w-full object-cover"
-                />
-              </div>
-            </SketchFrame>
+            <PortraitStack />
           </motion.div>
-
-          <motion.p
-            aria-hidden
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 1.1, duration: 0.5 }}
-            className="absolute -bottom-12 -left-4 flex items-end gap-1 font-hand text-step-2 leading-none text-accent-text md:-left-20"
-          >
-            <span className="-rotate-3">hi, that&apos;s me!</span>
-            <svg viewBox="0 0 60 40" className="mb-3 h-8 w-12" fill="none" stroke="currentColor" strokeWidth={2.5} strokeLinecap="round">
-              <path d="M4 34 C 18 30, 36 22, 52 8" />
-              <path d="M40 8 L52 8 L50 20" />
-            </svg>
-          </motion.p>
         </div>
       </div>
 

@@ -18,14 +18,14 @@ const SectionHeader = ({ id, section, title, description }: SectionHeaderProps) 
       </span>
       <h2
         id={id}
-        className="font-display text-step-4 font-extrabold leading-[0.9] tracking-[-0.035em] text-body [font-stretch:78%] md:text-step-5"
+        className="font-display text-step-4 font-extrabold leading-[0.9] tracking-[-0.015em] text-body [font-stretch:90%] md:text-step-5"
       >
         {title}
       </h2>
     </div>
 
     {description && (
-      <p className="measure mt-5 font-hand text-step-2 leading-tight text-muted md:ml-[3.75rem]">
+      <p className="measure mt-5 font-hand text-step-1 leading-snug text-muted md:ml-[3.75rem]">
         {description}
       </p>
     )}

@@ -2,7 +2,6 @@ import p2 from "../assets/bmi.png";
 import p6 from "../assets/gena.png";
 import p3 from "../assets/ideapulse.png";
 import p1 from "../assets/summarizer.png";
-import p0 from "../assets/tosrag.png";
 import p4 from "../assets/wander.png";
 
 import a1 from "../assets/aircanvas.png";
@@ -42,8 +41,6 @@ export interface SkillGroup {
   items: string[];
   // Projects where the group was put to work, shown as evidence beside it.
   usedIn: string[];
-  // Still being learned: set in handwriting rather than bold display type.
-  learning?: boolean;
 }
 
 export interface Achievement {
@@ -54,30 +51,109 @@ export interface Achievement {
   description: string;
 }
 
+export interface ResearchInterest {
+  title: string;
+  detail: string;
+}
+
+export interface ResearchFinding {
+  // The number that carries the finding, set large.
+  figure: string;
+  label: string;
+  detail: string;
+}
+
+export interface ResearchProject {
+  title: string;
+  context: string;
+  question: string;
+  method: string;
+  findings: ResearchFinding[];
+  caveat: string;
+  methods: string[];
+  githubLink: string;
+}
+
 export const navigation: NavigationItem[] = [
   { title: "About", target: "about", flag: "blue" },
-  { title: "Skills", target: "skills", flag: "white" },
+  { title: "Research", target: "research", flag: "white" },
   { title: "Work", target: "work", flag: "red" },
-  { title: "Playground", target: "playground", flag: "green" },
-  { title: "Achievements", target: "achievements", flag: "yellow" },
-  { title: "Contact", target: "contact", flag: "blue" },
+  { title: "Skills", target: "skills", flag: "green" },
+  { title: "Playground", target: "playground", flag: "yellow" },
+  { title: "Achievements", target: "achievements", flag: "blue" },
+  { title: "Contact", target: "contact", flag: "white" },
 ];
+
+export const researchInterests: ResearchInterest[] = [
+  {
+    title: "Evaluating LLM systems",
+    detail:
+      "How to measure what a pipeline actually does, and how much a result can be trusted once you account for the size of the test set.",
+  },
+  {
+    title: "Retrieval-augmented generation",
+    detail:
+      "Which design choices change the answers, and why good retrieval scores don't always mean good answers.",
+  },
+  {
+    title: "NLP for legal and dense text",
+    detail:
+      "Question answering over documents where a missed clause or an invented one has real consequences.",
+  },
+];
+
+export const research: ResearchProject = {
+  title: "Does pipeline design matter for legal question answering?",
+  context: "Final-year research project \u00b7 GCES \u00b7 2026",
+  question:
+    "When a RAG system answers questions about Terms of Service, what changes the answer more: how the document is chunked, or which model writes the reply?",
+  method:
+    "Two frozen documents (the GitHub and Netflix terms) and 30 hand-written questions with annotated gold clauses. Phase 1 swept 15 chunking configurations (5 strategies \u00d7 3 sizes) with the generator held fixed. Phase 2 compared a local Llama 3.1 8B with Claude Opus under the winning setup. Answers were scored for truthfulness by an LLM judge that I checked against human labels.",
+  findings: [
+    {
+      figure: "0.50 \u2192 0.90",
+      label: "from chunking alone",
+      detail:
+        "Changing only how the document was split moved mean truthfulness from 0.50 to 0.90.",
+    },
+    {
+      figure: "0.98",
+      label: "recall isn\u2019t enough",
+      detail:
+        "Four configurations retrieved about 98% of the gold text, yet their answer quality ranged from 0.60 to 0.90.",
+    },
+    {
+      figure: "0.93 vs 0.60",
+      label: "Opus vs Llama",
+      detail:
+        "The whole gap came from questions that need several clauses combined. On simple lookups, both models were perfect.",
+    },
+    {
+      figure: "\u03ba = 0.92",
+      label: "judge agreement",
+      detail:
+        "The LLM judge agreed with human annotators as closely as the two humans agreed with each other.",
+    },
+  ],
+  caveat:
+    "None of these gaps survive significance testing. With 20\u201330 questions, most comparisons rest on the handful where the configurations differ. The bottleneck was the size of the question set, not the pipeline, and that is the question I\u2019d most like to take further.",
+  methods: [
+    "RAG",
+    "LLM-as-judge",
+    "Cohen\u2019s \u03ba",
+    "Wilcoxon + Holm",
+    "BCa bootstrap",
+    "pgvector",
+    "Python (SciPy, statsmodels)",
+    "TypeScript",
+  ],
+  githubLink: "https://github.com/llaxmi/tos-rag",
+};
 
 export const flagFor = (target: string): FlagColor =>
   navigation.find((item) => item.target === target)?.flag ?? "blue";
 
 export const projects: Project[] = [
-  {
-    title: "ToS RAG",
-    tagline: "Ask a Terms of Service what it actually says.",
-    description:
-      "My final year project: a controlled study of how retrieval design changes the answers you get from legal documents. It sweeps 15 chunking configurations, then compares Llama 3.1 8B against Claude Opus on the winner \u2014 and ships the pipeline as a demo where every claim cites the clause it came from.",
-    technologies:
-      "TypeScript, Python, Hono, Postgres, pgvector, Ollama, Claude API",
-    githubLink: "https://github.com/llaxmi/tos-rag",
-    date: "Aug 2026",
-    image: p0,
-  },
   {
     title: "GENA",
     tagline: "Turns your study notes into quizzes.",
@@ -160,12 +236,6 @@ export const skillGroups: SkillGroup[] = [
     label: "Foundations",
     items: ["JavaScript", "C", "C++"],
     usedIn: ["Coursework at GCES"],
-  },
-  {
-    label: "Exploring",
-    items: ["MediaPipe", "Three.js / R3F", "Framer Motion"],
-    usedIn: ["Air Canvas", "Valentine's Card"],
-    learning: true,
   },
 ];
 

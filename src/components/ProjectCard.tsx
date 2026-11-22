@@ -57,14 +57,14 @@ const ProjectCard = ({ project, variant = "pinned", tilt = 0 }: ProjectCardProps
 
         <div className={`flex flex-1 flex-col gap-3 ${featured ? "lg:col-span-5 lg:py-2" : ""}`}>
           {polaroid && (
-            <p className="-rotate-1 font-hand text-step-2 leading-tight text-body">
+            <p className="-rotate-1 font-hand text-step-1 leading-snug text-body">
               {project.tagline}
             </p>
           )}
 
           <div className="flex items-start justify-between gap-4">
             <h3
-              className={`font-display font-extrabold leading-[0.95] tracking-[-0.03em] text-body [font-stretch:82%] ${
+              className={`font-display font-extrabold leading-[0.95] tracking-[-0.015em] text-body [font-stretch:92%] ${
                 featured ? "text-step-4" : polaroid ? "text-step-1" : "text-step-2"
               }`}
             >
@@ -96,7 +96,7 @@ const ProjectCard = ({ project, variant = "pinned", tilt = 0 }: ProjectCardProps
 
           <p className="mt-auto flex items-end justify-between gap-4 pt-2 text-step--1 text-muted">
             <span>{tags.join(", ")}</span>
-            <span className="shrink-0 font-hand text-step-1 leading-none text-accent-text">
+            <span className="shrink-0 font-hand text-step-0 leading-none text-accent-text">
               {project.date}
             </span>
           </p>

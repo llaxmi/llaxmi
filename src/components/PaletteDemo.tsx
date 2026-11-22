@@ -135,7 +135,7 @@ const PaletteDemo = ({ initialImage }: PaletteDemoProps) => {
           className="aspect-square w-full object-cover object-top"
         />
         {dragging && (
-          <p className="absolute inset-0 grid place-items-center bg-white/80 font-hand text-step-2 text-body">
+          <p className="absolute inset-0 grid place-items-center bg-white/80 font-hand text-step-1 text-body">
             Drop it here
           </p>
         )}
@@ -171,7 +171,7 @@ const PaletteDemo = ({ initialImage }: PaletteDemoProps) => {
         >
           Try your own photo
         </button>
-        <p role="status" className="font-hand text-step-1 leading-none text-accent-text">
+        <p role="status" className="font-hand text-step-0 leading-none text-accent-text">
           {status || "Click a colour to copy it"}
         </p>
       </div>

@@ -84,7 +84,7 @@ const Lightbox = ({ item, onClose }: LightboxProps) => {
               className="w-full object-contain"
             />
             <div className="border-t border-rule p-6">
-              <h3 className="font-display text-step-2 font-extrabold leading-none tracking-[-0.02em] [font-stretch:85%] text-body">
+              <h3 className="font-display text-step-2 font-extrabold leading-none tracking-[-0.02em] [font-stretch:92%] text-body">
                 {item.title}
               </h3>
               <Caption as="p" className="mt-3 block">

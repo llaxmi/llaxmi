@@ -130,7 +130,7 @@ const NavOverlay = ({ open, onClose }: NavOverlayProps) => {
           </nav>
 
           <div className="mt-auto pt-8">
-            <ResumeButton label="Download CV" />
+            <ResumeButton inline />
           </div>
         </motion.div>
       )}

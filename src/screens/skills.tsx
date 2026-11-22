@@ -13,7 +13,7 @@ const Skills = () => (
         id="skills-heading"
         section="skills"
         title="Skills"
-        description="What I reach for, and what I'm still learning."
+        description="What I reach for, and where I've used it."
       />
       <SkillIndex />
     </div>

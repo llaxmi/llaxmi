@@ -9,33 +9,39 @@ const About = () => (
 
       <div className="col-span-4 md:col-span-7">
         <p className="measure text-step-2 leading-snug text-body">
-          I&apos;m a full stack developer based in Pokhara, Nepal. Most of what I
-          enjoy is the boring-sounding stuff done right: a data layer that
-          doesn&apos;t fall over, a form that doesn&apos;t fight the user.
+          I finished my Bachelor&apos;s in Software Engineering at GCES in 2026. In my
+          final-year project I found the part I enjoyed most wasn&apos;t building the
+          pipeline. It was designing the experiment around it, and seeing how
+          little a single leaderboard number can tell you.
         </p>
 
         <p className="measure mt-6 text-step-0 text-muted">
-          Outside client work I build small things for fun — an app for
-          animated love letters, a gesture-controlled 3D canvas, whatever idea
-          won&apos;t leave me alone that week.
+          I&apos;m drawn to retrieval-augmented generation, evaluation methods for
+          LLM systems, and NLP over dense documents like legal text. I&apos;d like to
+          spend the next few years studying these questions properly, as a PhD
+          student or research assistant.
         </p>
 
         <p className="measure mt-6 text-step-0 text-muted">
-          Right now I&apos;m working out where language models actually belong in an
-          interface, and where they don&apos;t.
+          Before that I spent two years shipping production software, most
+          recently LLM-backed data enrichment at SyncGTM. It taught me to write
+          code other people can run, which matters for reproducible research too.
+          All of my work is public on GitHub.
         </p>
       </div>
 
       <aside className="col-span-4 md:col-span-4 md:col-start-9">
-        <blockquote className="-rotate-2 font-hand text-step-4 leading-[1.05] text-flag-blue">
+        <blockquote className="-rotate-2 font-hand text-step-3 leading-tight text-flag-blue">
           I care about the parts people don&apos;t notice.
         </blockquote>
 
         <dl className="mt-12 border-t border-rule">
           {[
-            { label: "Role", value: "Full-stack Engineer" },
-            { label: "Current", value: "SyncGTM, on Next.js and NestJS" },
-            { label: "Education", value: "B.E. Software Engineering, GCES, 2026" },
+            { label: "Focus", value: "RAG & LLM evaluation" },
+            { label: "Degree", value: "B.E. Software Engineering, GCES, 2022–2026" },
+            { label: "CGPA", value: "3.63 / 4.00" },
+            { label: "Experience", value: "2 years in industry, SyncGTM & Codse" },
+            { label: "Code", value: "Public at github.com/llaxmi" },
           ].map(({ label, value }) => (
             <div
               key={label}

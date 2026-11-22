@@ -29,7 +29,7 @@
   --accent: rgb(var(--accent-rgb));
   --selection-ink: rgb(var(--selection-ink-rgb));
 
-  --step--1: clamp(0.84rem, 0.82rem + 0.1vw, 0.9rem);
+  --step--1: clamp(0.9rem, 0.88rem + 0.1vw, 0.97rem);
   --step-0: clamp(1rem, 0.96rem + 0.2vw, 1.13rem);
   --step-1: clamp(1.27rem, 1.19rem + 0.4vw, 1.5rem);
   --step-2: clamp(1.6rem, 1.46rem + 0.7vw, 2rem);
