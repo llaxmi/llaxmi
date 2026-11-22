@@ -4,7 +4,7 @@ export interface SocialLink {
   handle: string;
 }
 
-export const EMAIL = "llaxmii.dev@gmail.com";
+export const EMAIL = "lc.llaxmi@gmail.com";
 
 export const socialLinks: SocialLink[] = [
   { label: "GitHub", url: "https://github.com/llaxmi", handle: "@llaxmi" },

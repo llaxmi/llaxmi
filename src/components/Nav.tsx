@@ -3,7 +3,7 @@ import { Menu } from "lucide-react";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { Link } from "react-scroll";
 import { navigation } from "../constants/data";
-import { FRAYED, flagStyles } from "./primitives/Flag";
+import { FRAYED, flagStyles } from "./primitives/flagStyles";
 import NavOverlay from "./NavOverlay";
 import ResumeButton from "./ResumeButton";
 import ScrollProgress from "./ScrollProgress";
