@@ -76,10 +76,12 @@ const extractPalette = (img: HTMLImageElement): RGB[] => {
 interface PaletteDemoProps {
   // The image shown before a visitor adds their own.
   initialImage: string;
+  // Tailwind aspect class for the preview image.
+  imageAspect?: string;
 }
 
 /** A working copy of the palette generator: drop in a photo, get five colours. */
-const PaletteDemo = ({ initialImage }: PaletteDemoProps) => {
+const PaletteDemo = ({ initialImage, imageAspect = "aspect-square" }: PaletteDemoProps) => {
   const [src, setSrc] = useState(initialImage);
   const [palette, setPalette] = useState<RGB[]>([]);
   const [dragging, setDragging] = useState(false);
@@ -132,7 +134,7 @@ const PaletteDemo = ({ initialImage }: PaletteDemoProps) => {
           src={src}
           alt="Image the palette is taken from"
           onLoad={(e) => setPalette(extractPalette(e.currentTarget))}
-          className="aspect-square w-full object-cover object-top"
+          className={`${imageAspect} w-full object-cover object-top`}
         />
         {dragging && (
           <p className="absolute inset-0 grid place-items-center bg-white/80 font-hand text-step-1 text-body">
